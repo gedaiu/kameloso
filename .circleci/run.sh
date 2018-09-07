@@ -10,7 +10,7 @@ install_deps() {
     # fingerprint 0xEBCF975E5BA24D5E
     sudo apt-get -y --allow-unauthenticated install --reinstall d-apt-keyring
     sudo apt update
-    sudo apt install dmd-compiler dub
+    sudo apt install dmd-compiler dub gdb
 
     #sudo apt install ldc
 }
