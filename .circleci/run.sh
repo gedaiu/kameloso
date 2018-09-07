@@ -15,6 +15,21 @@ install_deps() {
     #sudo apt install ldc
 }
 
+debug() {
+    gdb --batch --ex "run" --args dub test --compiler="$1" --build-mode=singleFile \
+        -c colours+web
+    gdb --batch --ex "run" --args dub test --nodeps --compiler="$1" --build-mode=singleFile \
+        -c vanilla
+    gdb --batch --ex "run" --args dub build --nodeps --compiler="$1" --build-mode=singleFile \
+        -b debug -c colours+web
+    gdb --batch --ex "run" --args dub build --nodeps --compiler="$1" --build-mode=singleFile \
+        -b debug -c vanilla
+    gdb --batch --ex "run" --args dub build --nodeps --compiler="$1" --build-mode=singleFile \
+        -b plain -c colours+web
+    gdb --batch --ex "run" --args dub build --nodeps --compiler="$1" --build-mode=singleFile \
+        -b plain -c vanilla
+}
+
 build() {
     mkdir -p artifacts
 
@@ -41,8 +56,9 @@ case "$1" in
         install_deps;
         ;;
     build)
-        build dmd;
+        #build dmd;
         #build ldc2;  # doesn't support single build mode
+        debug dmd;
         ;;
     *)
         echo "Unknown command: $1";
