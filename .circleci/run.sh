@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -uexo pipefail
+set -ux #eo pipefail
 
 install_deps() {
     sudo wget http://master.dl.sourceforge.net/project/d-apt/files/d-apt.list \
@@ -15,39 +15,126 @@ install_deps() {
     #sudo apt install ldc
 }
 
-debug() {
-    gdb --batch --ex "run" --args dub test --compiler="$1" --build-mode=singleFile \
-        -c colours+web
-    gdb --batch --ex "run" --args dub test --nodeps --compiler="$1" --build-mode=singleFile \
-        -c vanilla
-    gdb --batch --ex "run" --args dub build --nodeps --compiler="$1" --build-mode=singleFile \
-        -b debug -c colours+web
-    gdb --batch --ex "run" --args dub build --nodeps --compiler="$1" --build-mode=singleFile \
-        -b debug -c vanilla
-    gdb --batch --ex "run" --args dub build --nodeps --compiler="$1" --build-mode=singleFile \
-        -b plain -c colours+web
-    gdb --batch --ex "run" --args dub build --nodeps --compiler="$1" --build-mode=singleFile \
-        -b plain -c vanilla
+separate_dmd_build() {
+    dmd -g -c -of=arsd.o arsd/*.d "$@" || return 1
+    dmd -g -c -of=base.o kameloso/*.d "$@" || return 1
+    dmd -g -c -of=plugins.o kameloso/plugins/*.d "$@" || return 1
 }
 
-build() {
+separate_dmd_link() {
+    ( [ ! -e arsd.o ] || [ ! -e base.o ] || [ ! -e plugins.o ] ) && return 1
+    gcc -g -o "$1" arsd.o base.o plugins.o -ldruntime -lphobos2 -lpthread
+    mv "$1" ../artifacts/
+}
+
+separate_dmd() {
+    local FAILED
+
     mkdir -p artifacts
+    cd source
 
-    dub test --compiler="$1" --build-mode=singleFile -c vanilla
-    dub test --nodeps --compiler="$1" --build-mode=singleFile -c colours+web
+    separate_dmd_build -debug -unittest -version=Colours || FAILED=1
+    separate_dmd_link "dmd-unittest-colour"
+    separate_cleanup
+    ../artifacts/dmd-unittest-colour
 
-    dub build --nodeps --compiler="$1" --build-mode=singleFile -b debug -c colours+web || true
-    mv kameloso artifacts/kameloso || true
+    separate_dmd_build -debug -unittest || FAILED=1
+    separate_dmd_link "dmd-unittest-vanilla"
+    separate_cleanup
+    ../artifacts/dmd-unittest-vanilla
 
-    dub build --nodeps --compiler="$1" --build-mode=singleFile -b debug -c vanilla || true
-    mv kameloso artifacts/kameloso-vanilla || true
+    separate_dmd_build -debug -version=Colours || FAILED=1
+    separate_dmd_link "dmd-debug-colour"
+    separate_cleanup
 
-    dub build --nodeps --compiler="$1" --build-mode=singleFile -b plain -c colours+web || true
-    test -e kameloso && mv kameloso artifacts/kameloso-plain || true
+    separate_dmd_build -debug || FAILED=1
+    separate_dmd_link "dmd-debug-vanilla"
+    separate_cleanup
 
-    dub build --nodeps --compiler="$1" --build-mode=singleFile -b plain -c vanilla || true
-    test -e kameloso && mv kameloso artifacts/kameloso-plain-vanilla || true
+    #separate_dmd_build -version=Colours || FAILED=1
+    #separate_dmd_link "dmd-plain-colour"
+    #separate_cleanup
+
+    #separate_dmd_build || FAILED=1
+    #separate_dmd_link "dmd-plain-vanilla"
+    #separate_cleanup
+
+    #separate_dmd_build -release -inline -version=Colours || FAILED=1
+    #separate_dmd_link "dmd-release-colour"
+    #separate_cleanup
+
+    #separate_dmd_build -release -inline || FAILED=1
+    #separate_dmd_link "dmd-release-vanilla"
+    #separate_cleanup
+
+    cd ..
+
+    return ${FAILED:-0}
 }
+
+
+separate_ldc_build() {
+    ldc -g -c -of=arsd.o arsd/*.d "$@" || return 1
+    ldc -g -c -of=base.o kameloso/*.d "$@" || return 1
+    ldc -g -c -of=plugins.o kameloso/plugins/*.d "$@" || return 1
+}
+
+separate_ldc_link() {
+    ( [ ! -e arsd.o ] || [ ! -e base.o ] || [ ! -e plugins.o ] ) && return 1
+    gcc -g -o "$1" arsd.o base.o plugins.o \
+        -ldl -lm -lLLVM -lphobos2-ldc-debug -ldruntime-ldc-debug -lpthread
+    mv "$1" ../artifacts/
+}
+
+separate_ldc() {
+    local FAILED
+
+    mkdir -p artifacts
+    cd source
+
+    separate_ldc_build -unittest -d-version=Colours || FAILED=1
+    separate_ldc_link "ldc-unittest-colour"
+    separate_cleanup
+    ../artifacts/ldc-unittest-colour
+
+    separate_ldc_build -unittest || FAILED=1
+    separate_ldc_link "ldc-unittest-vanilla"
+    separate_cleanup
+    ../artifacts/ldc-unittest-vanilla
+
+    separate_ldc_build -d-debug -d-version=Colours || FAILED=1
+    separate_ldc_link "ldc-debug-colour"
+    separate_cleanup
+
+    separate_ldc_build -d-debug || FAILED=1
+    separate_ldc_link "ldc-debug-vanilla"
+    separate_cleanup
+
+    #separate_ldc_build -d-version=Colours || FAILED=1
+    #separate_ldc_link "ldc-plain-colour"
+    #separate_cleanup
+
+    #separate_ldc_build || FAILED=1
+    #separate_ldc_link "ldc-plain-vanilla"
+    #separate_cleanup
+
+    #separate_ldc_build -release -d-version=Colours || FAILED=1
+    #separate_ldc_link "ldc-release-colour"
+    #separate_cleanup
+
+    #separate_ldc_build -release || FAILED=1
+    #separate_ldc_link "ldc-release-vanilla"
+    #separate_cleanup
+
+    cd ..
+
+    return ${FAILED:-0}
+}
+
+separate_cleanup() {
+    rm -f arsd.o base.o plugins.o
+}
+
 
 # execution start
 
@@ -56,9 +143,9 @@ case "$1" in
         install_deps;
         ;;
     build)
-        #build dmd;
-        #build ldc2;  # doesn't support single build mode
-        debug dmd;
+        separate_dmd || FAILED=1
+        separate_ldc || FAILED=1
+        [ ${FAILED:-0} -eq 1 ] && exit 1
         ;;
     *)
         echo "Unknown command: $1";
