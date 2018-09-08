@@ -95,12 +95,12 @@ separate_ldc() {
     separate_ldc_build -unittest -d-version=Colours || FAILED=1
     separate_ldc_link "ldc-unittest-colour"
     separate_cleanup
-    ../artifacts/ldc-unittest-colour
+    [ -e ../artifacts/ldc-unittest-colour ] && ../artifacts/ldc-unittest-colour
 
     separate_ldc_build -unittest || FAILED=1
     separate_ldc_link "ldc-unittest-vanilla"
     separate_cleanup
-    ../artifacts/ldc-unittest-vanilla
+    [ -e ../artifacts/ldc-unittest-vanilla ] && ../artifacts/ldc-unittest-vanilla
 
     separate_ldc_build -d-debug -d-version=Colours || FAILED=1
     separate_ldc_link "ldc-debug-colour"
