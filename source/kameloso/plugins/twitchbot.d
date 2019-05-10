@@ -125,6 +125,68 @@ void onSelfpart(TwitchBotPlugin plugin, const IRCEvent event)
 }
 
 
+// onLink
+/++
+ +  Deletes a message and timeouts the sender upon them sending a web link.
+ +/
+@(IRCEvent.Type.CHAN)
+@(PrivilegeLevel.ignore)
+@(ChannelPolicy.home)
+void onLink(TwitchBotPlugin plugin, const IRCEvent event)
+{
+    if (!plugin.twitchBotSettings.disallowLinks) return;
+
+    import std.algorithm.searching : canFind;
+    import std.range : only;
+    import std.uni : asLowerCase, toLower;
+
+    foreach (immutable substring; only("http://", "www."))
+    {
+        if (!event.content.asLowerCase.canFind(substring)) continue;
+
+        string lower = event.content.toLower;
+
+        lower.nom(substring);
+        immutable ptrdiff_t dotPos = lower.indexOf('.');
+
+        if (!dotPos) continue;
+
+        immutable ptrdiff_t spacePos = lower.indexOf(' ');
+        //immutable ptrdiff_t slashPos = lower.indexOf('/');
+
+        if (!spacePos || (spacePos > dotPos))
+        {
+            // There is no space or the space is after the dot
+            import std.format : format;
+
+            auto allowedToLink = plugin.activeChannels[event.channel].allowedToLink;
+
+            if (const timestamp = event.sender.nickname in allowedToLink)
+            {
+                import std.datetime.systime3 : Clock;
+
+                if ((Clock.currTime.toUnixTime - timestamp) > 60)
+                {
+                    // Exemption expired, remove and drop down
+                    allowedToLink.remove(event.sender.nickname);
+                }
+                else
+                {
+                    // Let pass
+                    return;
+                }
+            }
+
+            enum timeoutDuration = 60; // seconds
+            plugin.state.chan(event.channel, ".timeout %s :%d"
+                .format(event.sender.nickname, timeoutDuration));
+            plugin.state.chan(event.channel, ".delete " ~ event.id);
+            plugin.state.chan(event.channel, event.sender.nickname ~ ", no links allowed.");
+        }
+    }
+}
+
+
 // onCommandEnableDisable
 /++
  +  Toggles whether or not the bot should operate in this channel.
