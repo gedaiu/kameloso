@@ -989,6 +989,9 @@ private:
 
         /// UNIX timestamp of when broadcasting started.
         long broadcastStart;
+
+        /// UNIX timestamps of when a keyed nickname was allowed to link a URL to chat.
+        ulong[string] allowedToLink;
     }
 
     /// Array of active bot channels' state.
