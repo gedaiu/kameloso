@@ -187,6 +187,23 @@ void onLink(TwitchBotPlugin plugin, const IRCEvent event)
 }
 
 
+// onCommandAllowLinks
+/++
+ +  Flags a nickname as being allowed to post links for the next 60 seconds.
+ +/
+@(IRCEvent.Type.CHAN)
+@(PrivilegeLevel.admin)
+@(ChannelPolicy.home)
+@BotCommand(PrefixPolicy.prefixed, "allowlinks")
+@Description("Flags a nickname as allowed to link URLs for 60 seconds.")
+void onCommandAllowLinks(TwitchBotPlugin plugin, const IRCEvent event)
+{
+    import std.datetime.systime : Clock;
+    plugin.activeChannels[event.channel].allowedToLink[event.sender.nickname] = Clock.currTime.toUnixTime;
+    plugin.state.chan(event.channel, event.sender.nickname, " allowed to post links for 60 seconds.");
+}
+
+
 // onCommandEnableDisable
 /++
  +  Toggles whether or not the bot should operate in this channel.
