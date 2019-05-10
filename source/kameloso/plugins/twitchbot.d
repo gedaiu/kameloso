@@ -40,7 +40,7 @@ struct TwitchBotSettings
     bool voteReminders = true;
 
     /// Whether or not to disallow URL links (note: clashes with webtitles).
-    bool disallowLinks = false;
+    bool disallowLinks = true; //false;
 }
 
 
@@ -129,33 +129,43 @@ void onSelfpart(TwitchBotPlugin plugin, const IRCEvent event)
 /++
  +  Deletes a message and timeouts the sender upon them sending a web link.
  +/
+@Chainable
 @(IRCEvent.Type.CHAN)
 @(PrivilegeLevel.ignore)
 @(ChannelPolicy.home)
 void onLink(TwitchBotPlugin plugin, const IRCEvent event)
 {
     if (!plugin.twitchBotSettings.disallowLinks) return;
+    import std.stdio;
+    writeln("onLink");
 
+    import kameloso.string : nom;
     import std.algorithm.searching : canFind;
     import std.range : only;
+    import std.string : indexOf;
     import std.uni : asLowerCase, toLower;
 
-    foreach (immutable substring; only("http://", "www."))
+    foreach (immutable substring; only("https://", "www.", "http://"))
     {
+        writeln(substring);
         if (!event.content.asLowerCase.canFind(substring)) continue;
+        writeln("found!");
 
         string lower = event.content.toLower;
 
         lower.nom(substring);
         immutable ptrdiff_t dotPos = lower.indexOf('.');
+        writeln("dotPos:", dotPos);
 
-        if (!dotPos) continue;
+        if (dotPos == -1) continue;
 
         immutable ptrdiff_t spacePos = lower.indexOf(' ');
         //immutable ptrdiff_t slashPos = lower.indexOf('/');
+        writeln("spacePos:", spacePos);
 
-        if (!spacePos || (spacePos > dotPos))
+        if ((spacePos == -1) || (spacePos > dotPos))
         {
+            writeln("go ahead");
             // There is no space or the space is after the dot
             import std.format : format;
 
@@ -163,25 +173,27 @@ void onLink(TwitchBotPlugin plugin, const IRCEvent event)
 
             if (const timestamp = event.sender.nickname in allowedToLink)
             {
-                import std.datetime.systime3 : Clock;
+                writeln("found timestamp");
+                import std.datetime.systime : Clock;
 
-                if ((Clock.currTime.toUnixTime - timestamp) > 60)
+                if ((Clock.currTime.toUnixTime - *timestamp) > 60)
                 {
+                    writeln("it was too old");
                     // Exemption expired, remove and drop down
                     allowedToLink.remove(event.sender.nickname);
                 }
                 else
                 {
+                    writeln("checks out, let pass");
                     // Let pass
                     return;
                 }
             }
 
             enum timeoutDuration = 60; // seconds
-            plugin.state.chan(event.channel, ".timeout %s :%d"
+            plugin.state.chan(event.channel, ".timeout %s %d no links allowed"
                 .format(event.sender.nickname, timeoutDuration));
             plugin.state.chan(event.channel, ".delete " ~ event.id);
-            plugin.state.chan(event.channel, event.sender.nickname ~ ", no links allowed.");
         }
     }
 }
@@ -200,7 +212,7 @@ void onCommandAllowLinks(TwitchBotPlugin plugin, const IRCEvent event)
 {
     import std.datetime.systime : Clock;
     plugin.activeChannels[event.channel].allowedToLink[event.sender.nickname] = Clock.currTime.toUnixTime;
-    plugin.state.chan(event.channel, event.sender.nickname, " allowed to post links for 60 seconds.");
+    plugin.state.chan(event.channel, event.sender.nickname ~ " allowed to post links for 60 seconds.");
 }
 
 
