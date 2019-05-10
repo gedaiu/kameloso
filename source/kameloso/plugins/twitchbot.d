@@ -1041,6 +1041,41 @@ void populateAdmins(TwitchBotPlugin plugin, const string filename)
 }
 
 
+// periodically
+/++
+ +  Periodically purges the list of nicknames allowed to link URLs to the chat.
+ +
+ +  This clears up stale entries.
+ +/
+void periodically(TwitchBotPlugin plugin)
+{
+    import std.datetime.systime : Clock;
+
+    immutable now = Clock.currTime.toUnixTime;
+
+    foreach (ref activeChannel; plugin.activeChannels)
+    {
+        string[] garbage;
+
+        foreach (immutable nickname, const timestamp; activeChannel.allowedToLink)
+        {
+            if ((now - timestamp) > 60)
+            {
+                garbage ~= nickname;
+            }
+        }
+
+        foreach (immutable nickname; garbage)
+        {
+            activeChannel.allowedToLink.remove(nickname);
+        }
+    }
+
+    enum hoursBetweenPurges = 1;
+    plugin.state.nextPeriodical = now + (hoursBetweenPurges * 3600);
+}
+
+
 mixin UserAwareness;
 mixin ChannelAwareness;
 mixin TwitchAwareness;
