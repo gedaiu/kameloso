@@ -38,6 +38,9 @@ struct TwitchBotSettings
 
     /// Whether or not to do reminders at the end of vote durations.
     bool voteReminders = true;
+
+    /// Whether or not to disallow URL links (note: clashes with webtitles).
+    bool disallowLinks = false;
 }
 
 
