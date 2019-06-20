@@ -870,10 +870,15 @@ import kameloso.plugins.common : IRCPlugin;
  +          `kameloso.irc.defs.IRCEvent.Type`-awaiting `core.thread.Fiber`s to
  +          iterate and process.
  +      event = The triggering `kameloso.irc.defs.IRCEvent`.
+ +
+ +  Returns:
+ +      `true` if a `core.thread.Fiber` was triggered, `false` if not.
  +/
-void handleFibers(IRCPlugin plugin, const IRCEvent event)
+bool handleFibers(IRCPlugin plugin, const IRCEvent event)
 {
     import core.thread : Fiber;
+
+    bool retval;
 
     if (auto fibers = event.type in plugin.state.awaitingFibers)
     {
@@ -900,10 +905,13 @@ void handleFibers(IRCPlugin plugin, const IRCEvent event)
 
                         // Reset the payload so a new one will be attached next trigger
                         carryingFiber.payload = IRCEvent.init;
+
+                        retval = true;
                     }
                     else
                     {
                         fiber.call();
+                        retval = true;
                     }
                 }
 
@@ -965,6 +973,8 @@ void handleFibers(IRCPlugin plugin, const IRCEvent event)
             plugin.state.awaitingFibers.remove(event.type);
         }
     }
+
+    return retval;
 }
 
 
@@ -980,10 +990,14 @@ void handleFibers(IRCPlugin plugin, const IRCEvent event)
  +          timed fibers to process.
  +      nowInUnix = Current UNIX timestamp to compare the timed
  +          `core.thread.Fiber`'s timestamp with.
+ +
+ +  Returns:
+ +      `true` if a `core.thread.Fiber` was triggered, `false` if not.
  +/
-void handleTimedFibers(IRCPlugin plugin, ref int timedFiberCheckCounter, const long nowInUnix)
+bool handleTimedFibers(IRCPlugin plugin, ref int timedFiberCheckCounter, const long nowInUnix)
 {
     size_t[] toRemove;
+    bool retval;
 
     foreach (immutable i, ref fiber; plugin.state.timedFibers)
     {
@@ -1009,6 +1023,7 @@ void handleTimedFibers(IRCPlugin plugin, ref int timedFiberCheckCounter, const l
             if (fiber.state == Fiber.State.HOLD)
             {
                 fiber.call();
+                retval = true;
             }
 
             // Always removed a timed Fiber after processing
@@ -1059,6 +1074,8 @@ void handleTimedFibers(IRCPlugin plugin, ref int timedFiberCheckCounter, const l
         import std.algorithm.mutation : SwapStrategy, remove;
         plugin.state.timedFibers = plugin.state.timedFibers.remove!(SwapStrategy.unstable)(i);
     }
+
+    return retval;
 }
 
 
@@ -1071,11 +1088,16 @@ import kameloso.plugins.common : TriggerRequest;
  +  Params:
  +      bot = Reference to the current `kameloso.common.IRCBot`.
  +      reqs = Reference to an associative array of `TriggerRequest`s.
+ +
+ +  Returns:
+ +      `true` if a WHOIS call was issued, `false` if not.
  +/
-void whoisForTriggerRequestQueue(ref IRCBot bot, const TriggerRequest[][string] reqs)
+bool whoisForTriggerRequestQueue(ref IRCBot bot, const TriggerRequest[][string] reqs)
 {
     // Walk through requests and call `WHOIS` on those that haven't been
     // `WHOIS`ed in the last `Timeout.whois` seconds
+
+    bool retval;
 
     foreach (immutable nickname, const requestsForNickname; reqs)
     {
@@ -1092,8 +1114,11 @@ void whoisForTriggerRequestQueue(ref IRCBot bot, const TriggerRequest[][string] 
             if (!settings.hideOutgoing) logger.trace("--> WHOIS ", nickname);
             bot.throttleline("WHOIS ", nickname);
             bot.previousWhoisTimestamps[nickname] = now;
+            retval = true;
         }
     }
+
+    return retval;
 }
 
 
