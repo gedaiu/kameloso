@@ -1331,13 +1331,13 @@ private:
      +      event = Parsed `kameloso.irc.defs.IRCEvent` to pass onto `onEventImpl`
      +          after verifying we should process the event.
      +/
-    public void onEvent(const IRCEvent event)
+    public bool onEvent(const IRCEvent event)
     {
         if ((state.client.server.daemon != IRCServer.Daemon.unset) &&
             (state.client.server.daemon != IRCServer.Daemon.twitch))
         {
             // Daemon known and not Twitch
-            return;
+            return false;
         }
 
         if (event.type == IRCEvent.Type.CHAN)
@@ -1360,7 +1360,7 @@ private:
                     {
                         if (channel.enabled) return onEventImpl(event);
                     }
-                    return;
+                    return false;
                 }
             }
             else

@@ -314,12 +314,12 @@ private:
      +          after verifying we're not on a Twitch server.
      +/
     version(TwitchSupport)
-    public void onEvent(const IRCEvent event)
+    public bool onEvent(const IRCEvent event)
     {
         if (state.client.server.daemon == IRCServer.Daemon.twitch)
         {
             // Daemon is known to be Twitch
-            return;
+            return false;
         }
 
         return onEventImpl(event);
