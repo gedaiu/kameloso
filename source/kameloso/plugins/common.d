@@ -73,8 +73,8 @@ interface IRCPlugin
     /// Executed to let plugins modify an event mid-parse.
     void postprocess(ref IRCEvent) @system;
 
-    /// Executed upon new IRC event parsed from the server.
-    void onEvent(const IRCEvent) @system;
+    /// Executed upon new IRC event parsed from the server. Returns `true` if something triggered.
+    bool onEvent(const IRCEvent) @system;
 
     /// Executed when the plugin is requested to initialise its disk resources.
     void initResources() @system;
