@@ -586,11 +586,17 @@ Next mainLoop(ref IRCBot bot)
     /// How often to check for timed `core.thread.Fiber`s, multiples of `Timeout.receive`.
     enum checkTimedFibersEveryN = 3;
 
+    /// How often to check for messages.
+    enum checkMessagesEveryN = 3;
+
     /++
      +  How many more receive passes until it should next check for timed
      +  `core.thread.Fiber`s.
      +/
     int timedFiberCheckCounter = checkTimedFibersEveryN;
+
+    /// How many more receive passes until it should next check for messages.
+    int messageCheckCounter = checkMessagesEveryN;
 
     string logtint, errortint, warningtint;
 
@@ -621,6 +627,8 @@ Next mainLoop(ref IRCBot bot)
 
         import std.datetime.systime : Clock;
         immutable nowInUnix = Clock.currTime.toUnixTime;
+
+        bool shouldCheckMessages;
 
         foreach (ref plugin; bot.plugins)
         {
@@ -658,7 +666,7 @@ Next mainLoop(ref IRCBot bot)
                 foreach (plugin; bot.plugins)
                 {
                     if (!plugin.state.timedFibers.length) continue;
-                    plugin.handleTimedFibers(timedFiberCheckCounter, nowInUnix);
+                    shouldCheckMessages |= plugin.handleTimedFibers(timedFiberCheckCounter, nowInUnix);
                 }
             }
 
@@ -770,13 +778,14 @@ Next mainLoop(ref IRCBot bot)
                 {
                     try
                     {
-                        plugin.onEvent(event);
+                        // Trigger event handlers
+                        shouldCheckMessages |= plugin.onEvent(event);
 
                         // Go through Fibers awaiting IRCEvent.Types
-                        plugin.handleFibers(event);
+                        shouldCheckMessages |= plugin.handleFibers(event);
 
                         // Fetch any queued `WHOIS` requests and handle
-                        bot.whoisForTriggerRequestQueue(plugin.state.triggerRequestQueue);
+                        shouldCheckMessages |= bot.whoisForTriggerRequestQueue(plugin.state.triggerRequestQueue);
 
                         if (plugin.state.client.updated)
                         {
@@ -841,16 +850,21 @@ Next mainLoop(ref IRCBot bot)
             }
         }
 
-        // Check concurrency messages to see if we should exit, else repeat
-        try
+        // Only check messages if there was some activity that would warrant it.
+        if (shouldCheckMessages || (--messageCheckCounter <= 0))
         {
-            next = checkMessages(bot);
-        }
-        catch (Exception e)
-        {
-            logger.warningf("Unhandled exception: %s%s%s (at %1$s%4$s%3$s:%1$s%5$d%3$s)",
-                logtint, e.msg, warningtint, e.file, e.line);
-            version(PrintStacktraces) logger.trace(e.toString);
+            // Check concurrency messages to see if we should exit, else repeat
+            try
+            {
+                next = checkMessages(bot);
+                messageCheckCounter = checkMessagesEveryN;
+            }
+            catch (Exception e)
+            {
+                logger.warningf("Unhandled exception: %s%s%s (at %1$s%4$s%3$s:%1$s%5$d%3$s)",
+                    logtint, e.msg, warningtint, e.file, e.line);
+                version(PrintStacktraces) logger.trace(e.toString);
+            }
         }
     }
 
