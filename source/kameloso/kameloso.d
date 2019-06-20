@@ -115,6 +115,7 @@ void throttleline(Strings...)(ref IRCBot bot, const Strings strings)
 
             if (bot.parser.client.server.daemon == IRCServer.Daemon.twitch)
             {
+                // Twitch rate limiting is pretty harsh.
                 k = -1.0;
                 burst = 0.0;
             }
@@ -312,7 +313,6 @@ Next checkMessages(ref IRCBot bot)
 
         with (IRCEvent.Type)
         with (event)
-        with (bot)
         switch (event.type)
         {
         case CHAN:
@@ -915,18 +915,18 @@ bool handleFibers(IRCPlugin plugin, const IRCEvent event)
                         {
                             carryingFiber.payload = event;
                         }
+
                         carryingFiber.call();
 
                         // Reset the payload so a new one will be attached next trigger
                         carryingFiber.payload = IRCEvent.init;
-
-                        retval = true;
                     }
                     else
                     {
                         fiber.call();
-                        retval = true;
                     }
+
+                    retval = true;
                 }
 
                 if (fiber.state == Fiber.State.TERM)
