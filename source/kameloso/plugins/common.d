@@ -905,10 +905,14 @@ mixin template IRCPluginImpl(bool debug_ = false, string module_ = __MODULE__)
      +  Params:
      +      event = Parse `kameloso.irc.defs.IRCEvent` to pass onto `onEventImpl`.
      +
+     +  Returns:
+     +      `true` if a handler function was triggered or a WHOIS request filed,
+     +      `false` if not.
+     +
      +  See_Also:
      +      onEventImpl
      +/
-    public void onEvent(const IRCEvent event) @system
+    public bool onEvent(const IRCEvent event) @system
     {
         return onEventImpl(event);
     }
@@ -924,8 +928,12 @@ mixin template IRCPluginImpl(bool debug_ = false, string module_ = __MODULE__)
      +
      +  Params:
      +      event = Parsed `kameloso.irc.defs.IRCEvent` to dispatch to event handlers.
+     +
+     +  Returns:
+     +      `true` if a handler function was triggered or a WHOIS request filed,
+     +      `false` if not.
      +/
-    private void onEventImpl(const IRCEvent event) @system
+    private bool onEventImpl(const IRCEvent event) @system
     {
         mixin("static import thisModule = " ~ module_ ~ ";");
 
@@ -933,7 +941,7 @@ mixin template IRCPluginImpl(bool debug_ = false, string module_ = __MODULE__)
         import std.meta : Filter, templateNot, templateOr;
         import std.traits : getSymbolsByUDA, isSomeFunction, getUDAs, hasUDA;
 
-        if (!isEnabled) return;
+        if (!isEnabled) return false;
 
         alias setupAwareness(alias T) = hasUDA!(T, Awareness.setup);
         alias earlyAwareness(alias T) = hasUDA!(T, Awareness.early);
@@ -951,6 +959,8 @@ mixin template IRCPluginImpl(bool debug_ = false, string module_ = __MODULE__)
             repeat,
             return_,
         }
+
+        bool retval;
 
         Next handle(alias fun)(const IRCEvent event)
         {
@@ -1312,6 +1322,8 @@ mixin template IRCPluginImpl(bool debug_ = false, string module_ = __MODULE__)
                             if (settings.flush) stdout.flush();
                         }
 
+                        retval = true;
+
                         static if (is(Params : AliasSeq!IRCEvent) || (arity!fun == 0))
                         {
                             this.doWhois(mutEvent, privilegeLevel, &fun);
@@ -1374,6 +1386,8 @@ mixin template IRCPluginImpl(bool debug_ = false, string module_ = __MODULE__)
                     static assert(0, module_ ~ '.' ~ __traits(identifier, fun) ~
                         " has an unsupported function signature: " ~ typeof(fun).stringof);
                 }
+
+                retval = true;
 
                 static if (hasUDA!(fun, Chainable))
                 {
@@ -1469,6 +1483,8 @@ mixin template IRCPluginImpl(bool debug_ = false, string module_ = __MODULE__)
         tryCatchHandle!pluginFuns(event);
         tryCatchHandle!lateFuns(event);
         tryCatchHandle!cleanupFuns(event);
+
+        return retval;
     }
 
 
