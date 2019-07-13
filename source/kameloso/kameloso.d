@@ -731,6 +731,13 @@ Next mainLoop(ref IRCBot bot)
                 {
                     event = bot.parser.toIRCEvent(sanitize(attempt.line));
                 }
+                catch (Exception e)
+                {
+                    // If we should, print a stack trace so we know what happened,
+                    // then rethrow to the scopeguard.
+                    version(PrintStacktraces) logger.trace(e.toString);
+                    throw e;
+                }
 
                 if (bot.parser.client.updated)
                 {
