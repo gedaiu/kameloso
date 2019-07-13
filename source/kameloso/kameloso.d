@@ -1720,15 +1720,16 @@ int kamelosoMain(string[] args)
             import kameloso.terminal : TerminalToken;
             logger.warningf("The %s%s%s plugin failed to load its resources: %1$s%4$s%5$c",
                 logtint, e.file.baseName, warningtint, e.msg, TerminalToken.bell);
+            version(PrintStacktraces) logger.trace(e.info);
             retval = 1;
             break outerloop;
         }
         catch (Exception e)
         {
             import kameloso.terminal : TerminalToken;
-            logger.warningf("The %s%s%s plugin failed to load its resources.%c",
-                logtint, e.file.baseName, warningtint, TerminalToken.bell);
-            logger.trace(e.message);
+            logger.warningf("The %s%s%s plugin failed to load its resources: %1$s%4$s%5$c",
+                logtint, e.file.baseName, warningtint, e.msg, TerminalToken.bell);
+            version(PrintStacktraces) logger.trace(e.toString);
             retval = 1;
             break outerloop;
         }
