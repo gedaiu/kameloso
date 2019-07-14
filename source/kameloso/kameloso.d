@@ -1730,11 +1730,18 @@ int kamelosoMain(string[] args)
             logger.warningf("An error occured while loading the %s%s%s plugin's resources: %1$s%4$s%5$c",
                 logtint, e.file.baseName, warningtint, e.msg, TerminalToken.bell);
 
-            version(Windows) version(unittest)
+            version(Windows)
             {
-                // Do nothing until 2.088, revisit then
-                // https://issues.dlang.org/show_bug.cgi?id=20048
-                // https://github.com/dlang/druntime/pull/2675
+                version(unittest)
+                {
+                    // Do nothing until 2.088, revisit then
+                    // https://issues.dlang.org/show_bug.cgi?id=20048
+                    // https://github.com/dlang/druntime/pull/2675
+                }
+                else
+                {
+                    version(PrintStacktraces) logger.trace(e.toString);
+                }
             }
             else
             {
