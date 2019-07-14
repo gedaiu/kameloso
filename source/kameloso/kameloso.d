@@ -22,6 +22,20 @@ shared static this()
 
 
 /+
+    Under Windows and when doing unit tests, the program will segfault due to
+    https://issues.dlang.org/show_bug.cgi?id=20048. As such, version out the
+    block of code that causes the segfault, if we're unit testing on Windows.
+ +/
+version(Windows)
+{
+    version(unittest)
+    {
+        version = SusceptibleToIssue20048;
+    }
+}
+
+
+/+
     Warn about bug #18026; Stack overflow in ddmd/dtemplate.d:6241, TemplateInstance::needsCodegen()
 
     It may have been fixed in versions in the future at time of writing, so
@@ -1726,15 +1740,6 @@ int kamelosoMain(string[] args)
         }
         catch (Exception e)
         {
-            version(Windows)
-            {
-                version(unittest)
-                {
-                    // https://issues.dlang.org/show_bug.cgi?id=20048
-                    version = SusceptibleToIssue20048;
-                }
-            }
-
             version(SusceptibleToIssue20048) {}
             else
             {
