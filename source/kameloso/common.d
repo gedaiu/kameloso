@@ -123,7 +123,7 @@ struct CoreSettings
     bool saveOnExit = false;
 
     /// Whether to endlessly connect or whether to give up after a while.
-    bool endlesslyConnect = true;
+    bool endlesslyConnect = false;
 
     /// Character(s) that prefix a bot chat command.
     @Quoted string prefix = "!";

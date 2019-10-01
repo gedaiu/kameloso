@@ -551,145 +551,6 @@ void preInstanceSetup()
 }
 
 
-// setupSettings
-/++
- +  Sets up `kameloso.common.settings`, expanding paths and more.
- +
- +  This is called during early execution.
- +/
-void setupSettings()
-{
-    import std.path : buildNormalizedPath;
-
-    // Default values
-    settings.configFile = buildNormalizedPath(defaultConfigurationPrefix, "kameloso.conf");
-    settings.resourceDirectory = defaultResourcePrefix;
-
-    // Some environments require us to flush standard out after writing to it,
-    // or else nothing will appear on screen (until it gets automatically flushed
-    // at an indeterminate point in the future).
-    immutable platform = getPlatform();
-    if ((platform == "Cygwin") || (platform == "vscode"))
-    {
-        // Whitelist more as we find them.
-        settings.flush = true;
-    }
-}
-
-
-// verifySettings
-/++
- +  Verifies some settings and returns whether the program should continue
- +  executing (or whether there were errors such that we should exit).
- +
- +  This is called after command-line arguments have been parsed.
- +
- +  Params:
- +      instance = Reference to the current `Kameloso`.
- +
- +  Returns:
- +      `Next.returnFailure` if the program should exit, `Next.continue_` otherwise.
- +/
-Next verifySettings(ref Kameloso instance)
-{
-    if (!settings.force)
-    {
-        IRCServer conservativeServer;
-        conservativeServer.maxNickLength = 25;  // Twitch max, should be enough
-
-        if (!instance.parser.client.nickname.isValidNickname(conservativeServer))
-        {
-            // No need to print the nickname, visible from printObjects preivously
-            logger.error("Invalid nickname!");
-            return Next.returnFailure;
-        }
-
-        if (!settings.prefix.length)
-        {
-            logger.error("No prefix configured!");
-            return Next.returnFailure;
-        }
-    }
-
-    version(Posix)
-    {
-        import lu.string : contains;
-
-        // Workaround for Issue 19247:
-        // Segmentation fault when resolving address with std.socket.getAddress inside a Fiber
-        // the workaround being never resolve addresses that don't contain at least one dot
-        immutable addressIsResolvable = instance.parser.server.address.contains('.');
-    }
-    else
-    {
-        // On Windows this doesn't happen, so allow all addresses.
-        enum addressIsResolvable = true;
-    }
-
-    if (!settings.force && !addressIsResolvable)
-    {
-        string logtint, errortint;
-
-        version(Colours)
-        {
-            if (!settings.monochrome)
-            {
-                import kameloso.logger : KamelosoLogger;
-
-                logtint = (cast(KamelosoLogger)logger).logtint;
-                errortint = (cast(KamelosoLogger)logger).errortint;
-            }
-        }
-
-        logger.errorf("Invalid address! [%s%s%s]", logtint,
-            instance.parser.server.address, errortint);
-        return Next.returnFailure;
-    }
-
-    return Next.continue_;
-}
-
-
-// resolveResourceDirectory
-/++
- +  Resolves resource directories verbosely.
- +
- +  This is called after settings have been verified, before plugins are initialised.
- +
- +  Params:
- +      instance = Reference to the current `Kameloso`.
- +/
-void resolveResourceDirectory(ref Kameloso instance)
-{
-    import std.file : exists;
-    import std.path : buildNormalizedPath, dirName;
-
-    // Resolve and create the resource directory
-    settings.resourceDirectory = buildNormalizedPath(settings.resourceDirectory,
-        "server", instance.parser.server.address);
-    settings.configDirectory = settings.configFile.dirName;
-
-    if (!settings.resourceDirectory.exists)
-    {
-        import std.file : mkdirRecurse;
-
-        string infotint;
-
-        version(Colours)
-        {
-            if (!settings.monochrome)
-            {
-                import kameloso.logger : KamelosoLogger;
-                infotint = (cast(KamelosoLogger)logger).infotint;
-            }
-        }
-
-        mkdirRecurse(settings.resourceDirectory);
-        logger.logf("Created resource directory %s%s", infotint, settings.resourceDirectory);
-    }
-}
-
-
 // startBot
 /++
  +  Main connection logic.
@@ -792,7 +653,7 @@ int initBot(string[] args)
     }
 
     // Set up the terminal environment.
-    preInstanceSetup();
+    //preInstanceSetup();
 
     // Initialise the main Kameloso. Set its abort pointer to the global abort.
     Kameloso instance;
@@ -800,7 +661,7 @@ int initBot(string[] args)
     Attempt attempt;
 
     // Set up `kameloso.common.settings`, expanding paths.
-    setupSettings();
+    //setupSettings();
 
     // Initialise the logger immediately so it's always available.
     // handleGetopt re-inits later when we know the settings for monochrome
@@ -857,28 +718,6 @@ int initBot(string[] args)
     {
         complainAboutMissingConfiguration(args);
     }
-
-    // Verify that settings are as they should be (nickname exists and not too long, etc)
-    immutable actionAfterVerification = instance.verifySettings();
-
-    with (Next)
-    final switch (actionAfterVerification)
-    {
-    case continue_:
-        break;
-
-    case retry:  // should never happen
-        assert(0, "verifySettings returned Next.retry");
-
-    case returnSuccess:
-        return 0;
-
-    case returnFailure:
-        return 1;
-    }
-
-    // Resolve resource directory paths.
-    instance.resolveResourceDirectory();
 
     // Save the original nickname *once*, outside the connection loop and before
     // initialising plugins (who will make a copy of it). Knowing this is useful

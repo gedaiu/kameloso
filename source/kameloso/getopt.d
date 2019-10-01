@@ -279,7 +279,7 @@ void printHelp(GetoptResult results) @system
 Next writeConfig(ref Kameloso instance, ref IRCClient client, ref IRCServer server,
     ref IRCBot bot, ref string[] customSettings) @system
 {
-    import kameloso.common : logger, applyDefaults, printVersionInfo,
+    import kameloso.common : logger, /*applyDefaults,*/ printVersionInfo,
         settings, writeConfigurationFile;
     import kameloso.printing : printObjects;
     import std.stdio : writeln;
@@ -311,7 +311,7 @@ Next writeConfig(ref Kameloso instance, ref IRCClient client, ref IRCServer serv
     instance.initPlugins(customSettings);
 
     // Fill out some empty fields
-    applyDefaults(client, server);
+    //applyDefaults(client, server);
 
     import kameloso.constants : KamelosoDefaultStrings;
     if (!instance.bot.quitReason.length) instance.bot.quitReason = KamelosoDefaultStrings.quitReason;
@@ -370,7 +370,7 @@ public:
  +/
 Next handleGetopt(ref Kameloso instance, string[] args, ref string[] customSettings) @system
 {
-    import kameloso.common : applyDefaults, printVersionInfo, settings;
+    import kameloso.common : /*applyDefaults,*/ printVersionInfo, settings;
     import std.format : format;
     import std.getopt : arraySep, config, getopt;
     import std.stdio : stdout, writeln;
@@ -482,15 +482,15 @@ Next handleGetopt(ref Kameloso instance, string[] args, ref string[] customSetti
          +/
 
         meldSettingsFromFile(parser.client, parser.server, instance.bot, settings);
-        applyDefaults(parser.client, parser.server);
+        //applyDefaults(parser.client, parser.server);
         adjustGetopt(argsBackup,
             "--bright", &settings.brightTerminal,
             "--brightTerminal", &settings.brightTerminal,
             "--monochrome", &settings.monochrome,
         );
 
-        import kameloso.common : initLogger;
-        initLogger(settings.monochrome, settings.brightTerminal, settings.flush);
+        /*import kameloso.common : initLogger;
+        initLogger(settings.monochrome, settings.brightTerminal, settings.flush);*/
 
         // 5. Give common.d a copy of `settings`, for `printObject` and for plugins
         static import kameloso.common;

@@ -475,31 +475,6 @@ bool applyCustomSettings(IRCPlugin[] plugins, string[] customSettings)
 
         if (pluginstring == "core")
         {
-            import kameloso.common : initLogger, settings;
-            import lu.objmanip : setMemberByName;
-
-            try
-            {
-                immutable success = settings.setMemberByName(setting, value);
-
-                if (!success)
-                {
-                    logger.warningf("No such %score%s setting: %1$s%3$s",
-                        logtint, warningtint, setting);
-                    noErrors = false;
-                }
-                else if ((setting == "monochrome") || (setting == "brightTerminal"))
-                {
-                    initLogger(settings.monochrome, settings.brightTerminal, settings.flush);
-                }
-            }
-            catch (ConvException e)
-            {
-                logger.warningf(`Invalid value for %score%s.%1$s%3$s%2$s: "%1$s%4$s%2$s"`,
-                    logtint, warningtint, setting, value);
-                noErrors = false;
-            }
-
             continue top;
         }
         else
