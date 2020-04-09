@@ -1273,15 +1273,16 @@ struct Tint
             import kameloso.logger : KamelosoLogger;
             import std.traits : isSomeFunction;
 
-            //enum tintfun = "(cast(KamelosoLogger)logger)." ~ tint ~ "tint";
+            KamelosoLogger kamelog = cast(KamelosoLogger)logger;
+            assert(kamelog, "`logger` is null or is not a `KamelosoLogger` " ~
+                "as seen from `Tint.opDispatch`");
 
-            pragma(msg, __VERSION__);
+            enum tintfun = "kamelog." ~ tint ~ "tint";
 
-            static if (__traits(hasMember, cast(KamelosoLogger)logger, tint ~ "tint") &&
-                isSomeFunction!(mixin("(cast(KamelosoLogger)logger)." ~ tint ~ "tint")))
+            static if (__traits(hasMember, kamelog, tint ~ "tint") &&
+                isSomeFunction!(mixin(tintfun)))
             {
-                return monochrome ? string.init :
-                    mixin("(cast(KamelosoLogger)logger)." ~ tint ~ "tint");
+                return monochrome ? string.init : mixin(tintfun);
             }
             else
             {
