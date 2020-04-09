@@ -2,20 +2,20 @@ platform: x64
 
 environment:
   matrix:
-    - DC: dmd
-      DReleaseType: releases
-      DVersion: 2.091.0
-      DSubversion:
-      arch: x64
-      dubArgs: --build-mode=singleFile
-      Ddflags: -lowmem
-    - DC: dmd
-      DReleaseType: releases
-      DVersion: 2.091.0
-      DSubversion:
-      arch: x86
-      dubArgs: --build-mode=singleFile
-      Ddflags: -lowmem
+    #- DC: dmd
+      #DReleaseType: releases
+      #DVersion: 2.091.0
+      #DSubversion:
+      #arch: x64
+      #dubArgs: --build-mode=singleFile
+      #Ddflags: -lowmem
+    #- DC: dmd
+      #DReleaseType: releases
+      #DVersion: 2.091.0
+      #DSubversion:
+      #arch: x86
+      #dubArgs: --build-mode=singleFile
+      #Ddflags: -lowmem
     #- DC: dmd
       #DReleaseType: releases
       #DVersion: 2.090.1
@@ -44,44 +44,44 @@ environment:
       #arch: x86
       #dubArgs: --build-mode=singleFile
       #Ddflags: -lowmem
-    - DC: dmd
-      DReleaseType: releases
-      DVersion: 2.084.0
-      DSubversion:
-      arch: x64
-      dubArgs:
-      Ddflags:
-    - DC: dmd
-      DReleaseType: releases
-      DVersion: 2.084.0
-      DSubversion:
-      arch: x86
-      dubArgs:
-      Ddflags:
-    - DC: ldc
-      DVersion: 1.20.0
-      DSubversion:
-      arch: x64
-      dubArgs:
-      Ddflags:
-    - DC: ldc
-      DVersion: 1.19.0
-      DSubversion:
-      arch: x64
-      dubArgs:
-      Ddflags:
+    #- DC: dmd
+      #DReleaseType: releases
+      #DVersion: 2.084.0
+      #DSubversion:
+      #arch: x64
+      #dubArgs:
+      #Ddflags:
+    #- DC: dmd
+      #DReleaseType: releases
+      #DVersion: 2.084.0
+      #DSubversion:
+      #arch: x86
+      #dubArgs:
+      #Ddflags:
+    #- DC: ldc
+      #DVersion: 1.20.0
+      #DSubversion:
+      #arch: x64
+      #dubArgs:
+      #Ddflags:
+    #- DC: ldc
+      #DVersion: 1.19.0
+      #DSubversion:
+      #arch: x64
+      #dubArgs:
+      #Ddflags:
     - DC: ldc
       DVersion: 1.18.0
       DSubversion:
       arch: x64
       dubArgs:
       Ddflags:
-    - DC: ldc
-      DVersion: 1.14.0
-      DSubversion:
-      arch: x64
-      dubArgs:
-      Ddflags:
+    #- DC: ldc
+      #DVersion: 1.14.0
+      #DSubversion:
+      #arch: x64
+      #dubArgs:
+      #Ddflags:
 
 skip_tags: true
 branches:
