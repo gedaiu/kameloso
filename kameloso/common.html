@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Module kameloso.common</title>
+		<link rel="stylesheet" href="../css/style.min.css"/>
+		<script type="text/javascript" src="../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view collapsed">
+						<div class="package ">
+							<a href="../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Module kameloso.common</h1><p>Common functions used throughout the program, generic enough to be used in
+  several places, not fitting into any specific one.
+</p>
+				<section></section>
+				<section>
+					<h2>Functions</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="findURLs" class="public" href="../kameloso/common/findURLs.html">findURLs</a><span class="tableEntryAnnotation">(line)</span>
+								</code>
+							</td>
+							<td>Finds URLs in a string, returning an array of them. Does not filter out duplicates.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="initLogger" class="public" href="../kameloso/common/initLogger.html">initLogger</a><span class="tableEntryAnnotation">(monochrome, bright, flush)</span>
+								</code>
+							</td>
+							<td>Initialises the <code class="lang-d"><a href="../kameloso/logger/KamelosoLogger.html" title="kameloso.logger.KamelosoLogger"><span class="typ">KamelosoLogger</span></a></code> logger for use in this thread.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="printStacktrace" class="public" href="../kameloso/common/printStacktrace.html">printStacktrace</a><span class="tableEntryAnnotation">()</span>
+								</code>
+							</td>
+							<td>Prints the current stacktrace to the terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="printVersionInfo" class="public" href="../kameloso/common/printVersionInfo.html">printVersionInfo</a><span class="tableEntryAnnotation">(colourCode)</span>
+								</code>
+							</td>
+							<td>Prints out the bot banner with the version number and GitHub URL, with the
+  passed colouring.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="printVersionInfo" class="public" href="../kameloso/common/printVersionInfo.html">printVersionInfo</a><span class="tableEntryAnnotation">(pre, post)</span>
+								</code>
+							</td>
+							<td>Prints out the bot banner with the version number and GitHub URL, optionally
+  with passed colouring in string format. Overload that does not rely on
+  <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html" title="kameloso.terminal.TerminalForeground"><span class="typ">TerminalForeground</span></a></code> being available, yet takes the necessary
+  parameters to allow the other overload to reuse this one.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="stripSeparatedPrefix" class="public" href="../kameloso/common/stripSeparatedPrefix.html">stripSeparatedPrefix</a><span class="tableEntryAnnotation">(line, prefix)</span>
+								</code>
+							</td>
+							<td>Strips a prefix word from a string, optionally also stripping away some
+  non-word characters (currently ":;?! ").
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="timeSince" class="public" href="../kameloso/common/timeSince.html">timeSince</a><span class="tableEntryAnnotation">(sink, duration)</span>
+								</code>
+							</td>
+							<td>Express how much time has passed in a <code class="lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">time<wbr/></span><span class="pun">.</span><span class="typ">Duration</span></code>, in natural
+  (English) language. Overload that writes the result to thet passed output range <code class="lang-d"><a href="../kameloso/common/timeSince.html#sink"><span class="pln">sink</span></a></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="timeSince" class="public" href="../kameloso/common/timeSince.html">timeSince</a><span class="tableEntryAnnotation">(duration)</span>
+								</code>
+							</td>
+							<td>Express how much time has passed in a <code class="lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">time<wbr/></span><span class="pun">.</span><span class="typ">Duration</span></code>, in natural
+  (English) language. Overload that returns the result as a new string.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Structs</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="CoreSettings" class="public" href="../kameloso/common/CoreSettings.html">CoreSettings</a>
+								</code>
+							</td>
+							<td>Aggregate struct containing runtime bot setting variables.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="IRCBot" class="public" href="../kameloso/common/IRCBot.html">IRCBot</a>
+								</code>
+							</td>
+							<td>Aggregate of information relevant for an IRC *bot* that goes beyond what is
+  needed for a mere IRC *client*.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="Kameloso" class="public" href="../kameloso/common/Kameloso.html">Kameloso</a>
+								</code>
+							</td>
+							<td>State needed for the kameloso bot, aggregated in a struct for easier passing
+  by reference.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="OutgoingLine" class="public" href="../kameloso/common/OutgoingLine.html">OutgoingLine</a>
+								</code>
+							</td>
+							<td>A string to be sent to the IRC server, along with whether or not the message
+  should be sent quietly or if it should be displayed in the terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="Tint" class="public" href="../kameloso/common/Tint.html">Tint</a>
+								</code>
+							</td>
+							<td>Provides an easy way to access the <code class="lang-d"><span class="pun">*</span><span class="pln">tint</span></code> members of our
+  <code class="lang-d"><a href="../kameloso/logger/KamelosoLogger.html" title="kameloso.logger.KamelosoLogger"><span class="typ">KamelosoLogger</span></a></code> instance <code class="lang-d"><a href="../kameloso/common/logger.html"><span class="pln">logger</span></a></code>.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Global variables</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a id="logger" class="public" href="../kameloso/common/logger.html">
+									<code>logger</code>
+								</a>
+							</td>
+							<td>
+								<code class="prettyprint lang-d"><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">experimental<wbr/></span><span class="pun">.</span><span class="pln">logger<wbr/></span><span class="pun">.</span><span class="pln">core<wbr/></span><span class="pun">.</span><span class="typ">Logger</span></code>
+							</td>
+							<td>Instance of a <code class="lang-d"><a href="../kameloso/logger/KamelosoLogger.html" title="kameloso.logger.KamelosoLogger"><span class="typ">KamelosoLogger</span></a></code>, providing timestamped and
+  coloured logging.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a id="settings" class="public" href="../kameloso/common/settings.html">
+									<code>settings</code>
+								</a>
+							</td>
+							<td>
+								<code class="prettyprint lang-d"><a href="../kameloso/common/CoreSettings.html"><span class="typ">CoreSettings</span></a></code>
+							</td>
+							<td>A <code class="lang-d"><a href="../kameloso/common/CoreSettings.html"><span class="typ">CoreSettings</span></a></code> struct global, housing certain runtime settings.
+</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

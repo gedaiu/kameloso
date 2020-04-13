@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Function applyCustomSettings</title>
+		<link rel="stylesheet" href="../../../css/style.min.css"/>
+		<script type="text/javascript" src="../../../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">
+							<a href="../../../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../../../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Function applyCustomSettings</h1><p>Changes a setting of a plugin, given both the names of the plugin and the
+  setting, in string form.
+</p>
+				<div class="prototype">
+					<code class="lang-d">
+						<div class="single-prototype">
+				<span class="typ">bool</span> <span class="pln">applyCustomSettings</span>
+				<span class="pun">(</span>
+				<br/>
+				&nbsp;&nbsp;<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.html"><span class="typ">IRCPlugin</span></a><span class="pun">[]</span> <span class="pln">plugins</span><span class="pun">,</span>
+				<br/>
+				&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">[]</span><span class="pun">)</span> <span class="pln">customSettings</span>
+				<br/>
+				<span class="pun">)</span><span class="pun">;</span>
+						</div>
+					</code>
+				</div>
+				<section><p>This merely iterates the passed <code class="lang-d"><a href="../../../kameloso/plugins/common/applyCustomSettings.html#plugins"><span class="pln">plugins</span></a></code> and calls their <code class="lang-d"><span class="pln">setSettingByName</span></code> methods.
+</p>
+</section>
+
+				<section><h2>Parameters</h2>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="plugins">plugins</td><td> Array of all <code class="lang-d"><span class="typ">IRCPlugin</span></code>s.</td></tr>
+<tr><td id="customSettings">customSettings</td><td> Array of custom settings to apply to plugins' own
+          setting, in the string forms of "<code class="lang-d"><span class="pln">plugin<wbr/></span><span class="pun">.</span><span class="pln">setting</span><span class="pun">=</span><span class="pln">value</span></code>".</td></tr>
+</table>
+</section>
+<section><h2>Returns</h2>
+<p><code class="lang-d"><span class="kwd">true</span></code> if no setting name mismatches occurred, <code class="lang-d"><span class="kwd">false</span></code> if it did.
+</p>
+</section>
+<section><h2>Example</h2>
+
+<pre class="code"><code class="lang-d"><span class="typ">IRCPluginState </span><span class="pln">state</span><span class="pun">;
+</span><span class="typ">IRCPlugin </span><span class="pln">plugin </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">MyPlugin</span><span class="pun">(</span><span class="pln">state</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">newSettings </span><span class="pun">=
+[
+    </span><span class="str">`myplugin.s="abc def ghi"`</span><span class="pun">,
+    </span><span class="str">"myplugin.i=42"</span><span class="pun">,
+    </span><span class="str">"myplugin.f=3.14"</span><span class="pun">,
+    </span><span class="str">"myplugin.b=true"</span><span class="pun">,
+    </span><span class="str">"myplugin.d=99.99"</span><span class="pun">,
+];
+
+</span><span class="pln">applyCustomSettings</span><span class="pun">([ </span><span class="pln">plugin </span><span class="pun">], </span><span class="pln">newSettings</span><span class="pun">);
+
+</span><span class="kwd">const </span><span class="pln">ps </span><span class="pun">= (</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">MyPlugin</span><span class="pun">)</span><span class="pln">plugin</span><span class="pun">)<wbr/>.</span><span class="pln">myPluginSettings</span><span class="pun">;
+
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">conv </span><span class="pun">: </span><span class="pln">text</span><span class="pun">;
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">math </span><span class="pun">: </span><span class="pln">approxEqual</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">s </span><span class="pun">== </span><span class="str">"abc def ghi"</span><span class="pun">), </span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">s</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">i </span><span class="pun">== </span><span class="lit">42</span><span class="pun">), </span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">i<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">f<wbr/></span><span class="pun">.</span><span class="pln">approxEqual</span><span class="pun">(</span><span class="lit">3.14f</span><span class="pun">), </span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">f<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">b</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">d<wbr/></span><span class="pun">.</span><span class="pln">approxEqual</span><span class="pun">(</span><span class="lit">99.99</span><span class="pun">), </span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">d<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+</span></code></pre>
+</section>
+<section><h2>Example</h2>
+
+<pre class="code"><code class="lang-d"><span class="typ">IRCPluginState </span><span class="pln">state</span><span class="pun">;
+</span><span class="typ">IRCPlugin </span><span class="pln">plugin </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">MyPlugin</span><span class="pun">(</span><span class="pln">state</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">newSettings </span><span class="pun">=
+[
+    </span><span class="str">`myplugin.s="abc def ghi"`</span><span class="pun">,
+    </span><span class="str">"myplugin.i=42"</span><span class="pun">,
+    </span><span class="str">"myplugin.f=3.14"</span><span class="pun">,
+    </span><span class="str">"myplugin.b=true"</span><span class="pun">,
+    </span><span class="str">"myplugin.d=99.99"</span><span class="pun">,
+];
+
+</span><span class="pln">applyCustomSettings</span><span class="pun">([ </span><span class="pln">plugin </span><span class="pun">], </span><span class="pln">newSettings</span><span class="pun">);
+
+</span><span class="kwd">const </span><span class="pln">ps </span><span class="pun">= (</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">MyPlugin</span><span class="pun">)</span><span class="pln">plugin</span><span class="pun">)<wbr/>.</span><span class="pln">myPluginSettings</span><span class="pun">;
+
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">conv </span><span class="pun">: </span><span class="pln">text</span><span class="pun">;
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">math </span><span class="pun">: </span><span class="pln">approxEqual</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">s </span><span class="pun">== </span><span class="str">"abc def ghi"</span><span class="pun">), </span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">s</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">i </span><span class="pun">== </span><span class="lit">42</span><span class="pun">), </span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">i<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">f<wbr/></span><span class="pun">.</span><span class="pln">approxEqual</span><span class="pun">(</span><span class="lit">3.14f</span><span class="pun">), </span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">f<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">b</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">d<wbr/></span><span class="pun">.</span><span class="pln">approxEqual</span><span class="pun">(</span><span class="lit">99.99</span><span class="pun">), </span><span class="pln">ps<wbr/></span><span class="pun">.</span><span class="pln">d<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

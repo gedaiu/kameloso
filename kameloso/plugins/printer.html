@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Module kameloso.plugins.printer</title>
+		<link rel="stylesheet" href="../../css/style.min.css"/>
+		<script type="text/javascript" src="../../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">
+							<a href="../../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Module kameloso.plugins.printer</h1><p>The Printer plugin takes incoming <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>s, formats them
+  into something easily readable and prints them to the screen, optionally with colours.
+  It also supports logging to disk.
+</p><section><p>It has no commands; all <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>s will be parsed and
+  printed, excluding certain types that were deemed too spammy. Print them as
+  well by disabling <code class="lang-d"><span class="pln">filterMost</span></code>, in the configuration file under the header <code class="lang-d"><span class="pun">[</span><span class="typ">Printer</span><span class="pun">]</span></code>.
+</p>
+
+<p>  It is not technically necessary, but it is the main form of feedback you
+  get from the plugin, so you will only want to disable it if you want a
+  really "headless" environment.
+</p>
+</section>
+
+				<section></section>
+				<section>
+					<h2>Functions</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="abbreviateBadges" class="public" href="../../kameloso/plugins/printer/abbreviateBadges.html">abbreviateBadges</a><span class="tableEntryAnnotation">(sink, badgestring)</span>
+								</code>
+							</td>
+							<td>Abbreviates a string of Twitch badges, to summarise all of them instead of
+  picking the dominant one and just displaying that. Takes an output range.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="abbreviateBadges" class="public" href="../../kameloso/plugins/printer/abbreviateBadges.html">abbreviateBadges</a><span class="tableEntryAnnotation">(sink, badgestring)</span>
+								</code>
+							</td>
+							<td>Abbreviates a string of Twitch badges, to summarise all of them instead of
+  picking the dominant one and just displaying that. Takes an output range.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="abbreviateBadges" class="public" href="../../kameloso/plugins/printer/abbreviateBadges.html">abbreviateBadges</a><span class="tableEntryAnnotation">(sink, badgestring)</span>
+								</code>
+							</td>
+							<td>Abbreviates a string of Twitch badges, to summarise all of them instead of
+  picking the dominant one and just displaying that. Takes an output range.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="abbreviateBadges" class="public" href="../../kameloso/plugins/printer/abbreviateBadges.html">abbreviateBadges</a><span class="tableEntryAnnotation">(sink, badgestring)</span>
+								</code>
+							</td>
+							<td>Abbreviates a string of Twitch badges, to summarise all of them instead of
+  picking the dominant one and just displaying that. Takes an output range.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="highlightEmotes" class="public" href="../../kameloso/plugins/printer/highlightEmotes.html">highlightEmotes</a><span class="tableEntryAnnotation">(event, colourful)</span>
+								</code>
+							</td>
+							<td>Tints emote strings and highlights Twitch emotes in a ref
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>'s <code class="lang-d"><span class="pln">content</span></code> member.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="highlightEmotes" class="public" href="../../kameloso/plugins/printer/highlightEmotes.html">highlightEmotes</a><span class="tableEntryAnnotation">(event, colourful)</span>
+								</code>
+							</td>
+							<td>Tints emote strings and highlights Twitch emotes in a ref
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>'s <code class="lang-d"><span class="pln">content</span></code> member.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="highlightEmotes" class="public" href="../../kameloso/plugins/printer/highlightEmotes.html">highlightEmotes</a><span class="tableEntryAnnotation">(event, colourful)</span>
+								</code>
+							</td>
+							<td>Tints emote strings and highlights Twitch emotes in a ref
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>'s <code class="lang-d"><span class="pln">content</span></code> member.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="highlightEmotes" class="public" href="../../kameloso/plugins/printer/highlightEmotes.html">highlightEmotes</a><span class="tableEntryAnnotation">(event, colourful)</span>
+								</code>
+							</td>
+							<td>Tints emote strings and highlights Twitch emotes in a ref
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>'s <code class="lang-d"><span class="pln">content</span></code> member.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="highlightEmotesImpl" class="public" href="../../kameloso/plugins/printer/highlightEmotesImpl.html">highlightEmotesImpl</a><span class="tableEntryAnnotation">(line, sink, emotes, pre, post, colourful)</span>
+								</code>
+							</td>
+							<td>Highlights Twitch emotes in the chat by tinting them a different colour,
+  saving the results into a passed output range sink.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="highlightEmotesImpl" class="public" href="../../kameloso/plugins/printer/highlightEmotesImpl.html">highlightEmotesImpl</a><span class="tableEntryAnnotation">(line, sink, emotes, pre, post, colourful)</span>
+								</code>
+							</td>
+							<td>Highlights Twitch emotes in the chat by tinting them a different colour,
+  saving the results into a passed output range sink.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="highlightEmotesImpl" class="public" href="../../kameloso/plugins/printer/highlightEmotesImpl.html">highlightEmotesImpl</a><span class="tableEntryAnnotation">(line, sink, emotes, pre, post, colourful)</span>
+								</code>
+							</td>
+							<td>Highlights Twitch emotes in the chat by tinting them a different colour,
+  saving the results into a passed output range sink.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="highlightEmotesImpl" class="public" href="../../kameloso/plugins/printer/highlightEmotesImpl.html">highlightEmotesImpl</a><span class="tableEntryAnnotation">(line, sink, emotes, pre, post, colourful)</span>
+								</code>
+							</td>
+							<td>Highlights Twitch emotes in the chat by tinting them a different colour,
+  saving the results into a passed output range sink.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="highlightEmotesImpl" class="public" href="../../kameloso/plugins/printer/highlightEmotesImpl.html">highlightEmotesImpl</a><span class="tableEntryAnnotation">(line, sink, emotes, pre, post, colourful)</span>
+								</code>
+							</td>
+							<td>Highlights Twitch emotes in the chat by tinting them a different colour,
+  saving the results into a passed output range sink.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="highlightEmotesImpl" class="public" href="../../kameloso/plugins/printer/highlightEmotesImpl.html">highlightEmotesImpl</a><span class="tableEntryAnnotation">(line, sink, emotes, pre, post, colourful)</span>
+								</code>
+							</td>
+							<td>Highlights Twitch emotes in the chat by tinting them a different colour,
+  saving the results into a passed output range sink.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="highlightEmotesImpl" class="public" href="../../kameloso/plugins/printer/highlightEmotesImpl.html">highlightEmotesImpl</a><span class="tableEntryAnnotation">(line, sink, emotes, pre, post, colourful)</span>
+								</code>
+							</td>
+							<td>Highlights Twitch emotes in the chat by tinting them a different colour,
+  saving the results into a passed output range sink.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="highlightEmotesImpl" class="public" href="../../kameloso/plugins/printer/highlightEmotesImpl.html">highlightEmotesImpl</a><span class="tableEntryAnnotation">(line, sink, emotes, pre, post, colourful)</span>
+								</code>
+							</td>
+							<td>Highlights Twitch emotes in the chat by tinting them a different colour,
+  saving the results into a passed output range sink.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Classes</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="PrinterPlugin" class="public" href="../../kameloso/plugins/printer/PrinterPlugin.html">PrinterPlugin</a>
+								</code>
+							</td>
+							<td>The Printer plugin takes all <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>s and prints them to
+  the local terminal, formatted and optionally in colour. Alternatively to disk
+  as logs.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="PrinterPlugin" class="public" href="../../kameloso/plugins/printer/PrinterPlugin.html">PrinterPlugin</a>
+								</code>
+							</td>
+							<td>The Printer plugin takes all <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>s and prints them to
+  the local terminal, formatted and optionally in colour. Alternatively to disk
+  as logs.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="PrinterPlugin" class="public" href="../../kameloso/plugins/printer/PrinterPlugin.html">PrinterPlugin</a>
+								</code>
+							</td>
+							<td>The Printer plugin takes all <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>s and prints them to
+  the local terminal, formatted and optionally in colour. Alternatively to disk
+  as logs.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="PrinterPlugin" class="public" href="../../kameloso/plugins/printer/PrinterPlugin.html">PrinterPlugin</a>
+								</code>
+							</td>
+							<td>The Printer plugin takes all <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>s and prints them to
+  the local terminal, formatted and optionally in colour. Alternatively to disk
+  as logs.
+</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

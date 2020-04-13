@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Module kameloso.plugins.admin</title>
+		<link rel="stylesheet" href="../../css/style.min.css"/>
+		<script type="text/javascript" src="../../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">
+							<a href="../../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module selected">
+							<a href="../../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Module kameloso.plugins.admin</h1><p>The Admin plugin features bot commands which help with debugging the current
+  state of the running bot, like printing the current list of users, the
+  current channels, the raw incoming strings from the server, and some other
+  things along the same line.
+</p><section><p>It also offers some less debug-y, more administrative functions, like adding
+  and removing homes on-the-fly, whitelisting or de-whitelisting account
+  names, adding/removing from the operator list, joining or leaving channels, and such.
+</p>
+
+<p>  See the GitHub wiki for more information about available commands:<br>
+  - https://github.com/zorael/kameloso/wiki/Current-plugins#admin
+</p>
+</section>
+
+				<section></section>
+				<section>
+					<h2>Functions</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="formatClientAssignment" class="public" href="../../kameloso/plugins/admin/formatClientAssignment.html">formatClientAssignment</a><span class="tableEntryAnnotation">(sink, client, server)</span>
+								</code>
+							</td>
+							<td>Constructs statement lines for each changed field of an
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCClient</span></code>, including instantiating a fresh one.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="formatClientAssignment" class="public" href="../../kameloso/plugins/admin/formatClientAssignment.html">formatClientAssignment</a><span class="tableEntryAnnotation">(sink, client, server)</span>
+								</code>
+							</td>
+							<td>Constructs statement lines for each changed field of an
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCClient</span></code>, including instantiating a fresh one.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="formatClientAssignment" class="public" href="../../kameloso/plugins/admin/formatClientAssignment.html">formatClientAssignment</a><span class="tableEntryAnnotation">(sink, client, server)</span>
+								</code>
+							</td>
+							<td>Constructs statement lines for each changed field of an
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCClient</span></code>, including instantiating a fresh one.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="formatClientAssignment" class="public" href="../../kameloso/plugins/admin/formatClientAssignment.html">formatClientAssignment</a><span class="tableEntryAnnotation">(sink, client, server)</span>
+								</code>
+							</td>
+							<td>Constructs statement lines for each changed field of an
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCClient</span></code>, including instantiating a fresh one.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="formatEventAssertBlock" class="public" href="../../kameloso/plugins/admin/formatEventAssertBlock.html">formatEventAssertBlock</a><span class="tableEntryAnnotation">(sink, event)</span>
+								</code>
+							</td>
+							<td>Constructs assert statement blocks for each changed field of an
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="formatEventAssertBlock" class="public" href="../../kameloso/plugins/admin/formatEventAssertBlock.html">formatEventAssertBlock</a><span class="tableEntryAnnotation">(sink, event)</span>
+								</code>
+							</td>
+							<td>Constructs assert statement blocks for each changed field of an
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="formatEventAssertBlock" class="public" href="../../kameloso/plugins/admin/formatEventAssertBlock.html">formatEventAssertBlock</a><span class="tableEntryAnnotation">(sink, event)</span>
+								</code>
+							</td>
+							<td>Constructs assert statement blocks for each changed field of an
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="formatEventAssertBlock" class="public" href="../../kameloso/plugins/admin/formatEventAssertBlock.html">formatEventAssertBlock</a><span class="tableEntryAnnotation">(sink, event)</span>
+								</code>
+							</td>
+							<td>Constructs assert statement blocks for each changed field of an
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onAnyEvent" class="public" href="../../kameloso/plugins/admin/onAnyEvent.html">onAnyEvent</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Prints incoming events to the local terminal, in forms depending on
+  which flags have been set with bot commands.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onAnyEvent" class="public" href="../../kameloso/plugins/admin/onAnyEvent.html">onAnyEvent</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Prints incoming events to the local terminal, in forms depending on
+  which flags have been set with bot commands.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onAnyEvent" class="public" href="../../kameloso/plugins/admin/onAnyEvent.html">onAnyEvent</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Prints incoming events to the local terminal, in forms depending on
+  which flags have been set with bot commands.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onAnyEvent" class="public" href="../../kameloso/plugins/admin/onAnyEvent.html">onAnyEvent</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Prints incoming events to the local terminal, in forms depending on
+  which flags have been set with bot commands.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandAsserts" class="public" href="../../kameloso/plugins/admin/onCommandAsserts.html">onCommandAsserts</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles a flag to print *assert statements* of incoming events.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandAsserts" class="public" href="../../kameloso/plugins/admin/onCommandAsserts.html">onCommandAsserts</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles a flag to print *assert statements* of incoming events.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandAsserts" class="public" href="../../kameloso/plugins/admin/onCommandAsserts.html">onCommandAsserts</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles a flag to print *assert statements* of incoming events.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandAsserts" class="public" href="../../kameloso/plugins/admin/onCommandAsserts.html">onCommandAsserts</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles a flag to print *assert statements* of incoming events.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandBus" class="public" href="../../kameloso/plugins/admin/onCommandBus.html">onCommandBus</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Sends an internal bus message to other plugins, much like how such can be
+  sent with the Pipeline plugin.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandBus" class="public" href="../../kameloso/plugins/admin/onCommandBus.html">onCommandBus</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Sends an internal bus message to other plugins, much like how such can be
+  sent with the Pipeline plugin.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandBus" class="public" href="../../kameloso/plugins/admin/onCommandBus.html">onCommandBus</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Sends an internal bus message to other plugins, much like how such can be
+  sent with the Pipeline plugin.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandBus" class="public" href="../../kameloso/plugins/admin/onCommandBus.html">onCommandBus</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Sends an internal bus message to other plugins, much like how such can be
+  sent with the Pipeline plugin.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandPrintBytes" class="public" href="../../kameloso/plugins/admin/onCommandPrintBytes.html">onCommandPrintBytes</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles a flag to print all incoming events *as individual bytes*.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandPrintBytes" class="public" href="../../kameloso/plugins/admin/onCommandPrintBytes.html">onCommandPrintBytes</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles a flag to print all incoming events *as individual bytes*.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandPrintBytes" class="public" href="../../kameloso/plugins/admin/onCommandPrintBytes.html">onCommandPrintBytes</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles a flag to print all incoming events *as individual bytes*.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandPrintBytes" class="public" href="../../kameloso/plugins/admin/onCommandPrintBytes.html">onCommandPrintBytes</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles a flag to print all incoming events *as individual bytes*.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandPrintRaw" class="public" href="../../kameloso/plugins/admin/onCommandPrintRaw.html">onCommandPrintRaw</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles a flag to print all incoming events *raw*.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandPrintRaw" class="public" href="../../kameloso/plugins/admin/onCommandPrintRaw.html">onCommandPrintRaw</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles a flag to print all incoming events *raw*.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandPrintRaw" class="public" href="../../kameloso/plugins/admin/onCommandPrintRaw.html">onCommandPrintRaw</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles a flag to print all incoming events *raw*.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandPrintRaw" class="public" href="../../kameloso/plugins/admin/onCommandPrintRaw.html">onCommandPrintRaw</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles a flag to print all incoming events *raw*.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandShowUser" class="public" href="../../kameloso/plugins/admin/onCommandShowUser.html">onCommandShowUser</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Prints the details of one or more specific, supplied users to the local terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandShowUser" class="public" href="../../kameloso/plugins/admin/onCommandShowUser.html">onCommandShowUser</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Prints the details of one or more specific, supplied users to the local terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandShowUser" class="public" href="../../kameloso/plugins/admin/onCommandShowUser.html">onCommandShowUser</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Prints the details of one or more specific, supplied users to the local terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandShowUser" class="public" href="../../kameloso/plugins/admin/onCommandShowUser.html">onCommandShowUser</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Prints the details of one or more specific, supplied users to the local terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandShowUsers" class="public" href="../../kameloso/plugins/admin/onCommandShowUsers.html">onCommandShowUsers</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Prints out the current <code class="lang-d"><span class="pln">users</span></code> array of the <code class="lang-d"><a href="../../kameloso/plugins/admin/AdminPlugin.html"><span class="typ">AdminPlugin</span></a></code>'s
+  <code class="lang-d"><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">plugins<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="typ">IRCPluginState</span></code> to the local terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandShowUsers" class="public" href="../../kameloso/plugins/admin/onCommandShowUsers.html">onCommandShowUsers</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Prints out the current <code class="lang-d"><span class="pln">users</span></code> array of the <code class="lang-d"><a href="../../kameloso/plugins/admin/AdminPlugin.html"><span class="typ">AdminPlugin</span></a></code>'s
+  <code class="lang-d"><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">plugins<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="typ">IRCPluginState</span></code> to the local terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandShowUsers" class="public" href="../../kameloso/plugins/admin/onCommandShowUsers.html">onCommandShowUsers</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Prints out the current <code class="lang-d"><span class="pln">users</span></code> array of the <code class="lang-d"><a href="../../kameloso/plugins/admin/AdminPlugin.html"><span class="typ">AdminPlugin</span></a></code>'s
+  <code class="lang-d"><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">plugins<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="typ">IRCPluginState</span></code> to the local terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandShowUsers" class="public" href="../../kameloso/plugins/admin/onCommandShowUsers.html">onCommandShowUsers</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Prints out the current <code class="lang-d"><span class="pln">users</span></code> array of the <code class="lang-d"><a href="../../kameloso/plugins/admin/AdminPlugin.html"><span class="typ">AdminPlugin</span></a></code>'s
+  <code class="lang-d"><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">plugins<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="typ">IRCPluginState</span></code> to the local terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandStatus" class="public" href="../../kameloso/plugins/admin/onCommandStatus.html">onCommandStatus</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Dumps information about the current state of the bot to the local terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandStatus" class="public" href="../../kameloso/plugins/admin/onCommandStatus.html">onCommandStatus</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Dumps information about the current state of the bot to the local terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandStatus" class="public" href="../../kameloso/plugins/admin/onCommandStatus.html">onCommandStatus</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Dumps information about the current state of the bot to the local terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandStatus" class="public" href="../../kameloso/plugins/admin/onCommandStatus.html">onCommandStatus</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Dumps information about the current state of the bot to the local terminal.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandSudo" class="public" href="../../kameloso/plugins/admin/onCommandSudo.html">onCommandSudo</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Sends supplied text to the server, verbatim.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandSudo" class="public" href="../../kameloso/plugins/admin/onCommandSudo.html">onCommandSudo</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Sends supplied text to the server, verbatim.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandSudo" class="public" href="../../kameloso/plugins/admin/onCommandSudo.html">onCommandSudo</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Sends supplied text to the server, verbatim.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandSudo" class="public" href="../../kameloso/plugins/admin/onCommandSudo.html">onCommandSudo</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Sends supplied text to the server, verbatim.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="start" class="public" href="../../kameloso/plugins/admin/start.html">start</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Print the initial assignment of client member fields, if we're printing asserts.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="start" class="public" href="../../kameloso/plugins/admin/start.html">start</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Print the initial assignment of client member fields, if we're printing asserts.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="start" class="public" href="../../kameloso/plugins/admin/start.html">start</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Print the initial assignment of client member fields, if we're printing asserts.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="start" class="public" href="../../kameloso/plugins/admin/start.html">start</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Print the initial assignment of client member fields, if we're printing asserts.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Classes</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="AdminPlugin" class="public" href="../../kameloso/plugins/admin/AdminPlugin.html">AdminPlugin</a>
+								</code>
+							</td>
+							<td>The Admin plugin is a plugin aimed for adḿinistrative use and debugging.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="AdminPlugin" class="public" href="../../kameloso/plugins/admin/AdminPlugin.html">AdminPlugin</a>
+								</code>
+							</td>
+							<td>The Admin plugin is a plugin aimed for adḿinistrative use and debugging.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="AdminPlugin" class="public" href="../../kameloso/plugins/admin/AdminPlugin.html">AdminPlugin</a>
+								</code>
+							</td>
+							<td>The Admin plugin is a plugin aimed for adḿinistrative use and debugging.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="AdminPlugin" class="public" href="../../kameloso/plugins/admin/AdminPlugin.html">AdminPlugin</a>
+								</code>
+							</td>
+							<td>The Admin plugin is a plugin aimed for adḿinistrative use and debugging.
+</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

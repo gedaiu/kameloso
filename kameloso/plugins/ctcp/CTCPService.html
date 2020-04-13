@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Class CTCPService</title>
+		<link rel="stylesheet" href="../../../css/style.min.css"/>
+		<script type="text/javascript" src="../../../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">
+							<a href="../../../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../../../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Class CTCPService</h1><p>The <code class="lang-d"><span class="pln">CTCP</span></code> service (client-to-client protocol) answers to special queries
+  sometime made over the IRC protocol. These are generally of metadata about
+  the client itself and its capabilities.
+</p>
+				<div class="prototype">
+					<code class="lang-d">
+						<div class="single-prototype">
+				<span class="kwd">class</span> <span class="typ">CTCPService</span>
+				<br>&nbsp;&nbsp;: <a href="../../../kameloso/plugins/ircplugin/IRCPlugin.html"><span class="typ">IRCPlugin</span></a>
+				<span class="pun">;</span>
+						</div>
+						<div class="single-prototype">
+				<span class="kwd">class</span> <span class="typ">CTCPService</span>
+				<br>&nbsp;&nbsp;: <a href="../../../kameloso/plugins/ircplugin/IRCPlugin.html"><span class="typ">IRCPlugin</span></a>
+				<span class="pun">;</span>
+						</div>
+						<div class="single-prototype">
+				<span class="kwd">class</span> <span class="typ">CTCPService</span>
+				<br>&nbsp;&nbsp;: <a href="../../../kameloso/plugins/ircplugin/IRCPlugin.html"><span class="typ">IRCPlugin</span></a>
+				<span class="pun">;</span>
+						</div>
+						<div class="single-prototype">
+				<span class="kwd">class</span> <span class="typ">CTCPService</span>
+				<br>&nbsp;&nbsp;: <a href="../../../kameloso/plugins/ircplugin/IRCPlugin.html"><span class="typ">IRCPlugin</span></a>
+				<span class="pun">;</span>
+						</div>
+					</code>
+				</div>
+				<section><p>Information about these were gathered from the following sites:
+      - https://modern.ircdocs.horse/ctcp.html
+      - http://www.irchelp.org/protocol/ctcpspec.html
+</p>
+</section>
+
+				<section><h2>Properties</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.commands.html" class="public inherited property"><code>commands</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">plugins<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="typ">Description</span><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span></code></td><td>Returns an array of the descriptions of the commands a plugin offers.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.isEnabled.html" class="public inherited property"><code>isEnabled</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Returns whether or not the plugin is enabled in its configuration section.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.name.html" class="public inherited property"><code>name</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Returns the name of the plugin, sliced off the module name.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.state.html" class="public inherited property"><code>state</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">inout</span><span class="pun">(</span><a href="../../../kameloso/plugins/ircplugin/IRCPluginState.html"><span class="typ">IRCPluginState</span></a><span class="pun">)</span></code></td><td>Returns a reference to the current <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginState.html"><span class="typ">IRCPluginState</span></a></code> of the plugin.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>Methods</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ctcp/CTCPService.onEvent.html" class="public">
+									<code>onEvent</code>
+								</a>
+								<span class="tableEntryAnnotation">(event)</span>
+							</td>
+							<td>Override <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginImpl.onEvent.html" title="kameloso.plugins.ircplugin.IRCPluginImpl.onEvent"><span class="typ">IRCPluginImpl<wbr/></span><span class="pun">.</span><span class="pln">onEvent</span></a></code> and inject a server check, so this
+  plugin does nothing on Twitch servers. The function to call is
+  <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginImpl.onEventImpl.html" title="kameloso.plugins.ircplugin.IRCPluginImpl.onEventImpl"><span class="typ">IRCPluginImpl<wbr/></span><span class="pun">.</span><span class="pln">onEventImpl</span></a></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.deserialiseConfigFrom.html" class="public inherited">
+									<code>deserialiseConfigFrom</code>
+								</a>
+								<span class="tableEntryAnnotation">(, , )</span>
+							</td>
+							<td>Read serialised configuration text into the plugin's settings struct.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.initResources.html" class="public inherited">
+									<code>initResources</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when the plugin is requested to initialise its disk resources.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.onBusMessage.html" class="public inherited">
+									<code>onBusMessage</code>
+								</a>
+								<span class="tableEntryAnnotation">(, content)</span>
+							</td>
+							<td>Executed when a bus message arrives from another plugin.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.onEvent.html" class="public inherited">
+									<code>onEvent</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed upon new IRC event parsed from the server.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.periodically.html" class="public inherited">
+									<code>periodically</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Call a plugin to perform its periodic tasks, iff the time is equal to or
+  exceeding <code class="lang-d"><span class="pln">nextPeriodical</span></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.postprocess.html" class="public inherited">
+									<code>postprocess</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed to let plugins modify an event mid-parse.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.printSettings.html" class="public inherited">
+									<code>printSettings</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when we want a plugin to print its Settings struct.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.reload.html" class="public inherited">
+									<code>reload</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Reloads the plugin, where such is applicable.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.serialiseConfigInto.html" class="public inherited">
+									<code>serialiseConfigInto</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when gathering things to put in the configuration file.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.setSettingByName.html" class="public inherited">
+									<code>setSettingByName</code>
+								</a>
+								<span class="tableEntryAnnotation">(, )</span>
+							</td>
+							<td>Executed during start if we want to change a setting by its string name.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.start.html" class="public inherited">
+									<code>start</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when connection has been established.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.teardown.html" class="public inherited">
+									<code>teardown</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed during shutdown or plugin restart.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>Properties</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.commands.html" class="public inherited property"><code>commands</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">plugins<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="typ">Description</span><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span></code></td><td>Returns an array of the descriptions of the commands a plugin offers.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.isEnabled.html" class="public inherited property"><code>isEnabled</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Returns whether or not the plugin is enabled in its configuration section.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.name.html" class="public inherited property"><code>name</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Returns the name of the plugin, sliced off the module name.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.state.html" class="public inherited property"><code>state</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">inout</span><span class="pun">(</span><a href="../../../kameloso/plugins/ircplugin/IRCPluginState.html"><span class="typ">IRCPluginState</span></a><span class="pun">)</span></code></td><td>Returns a reference to the current <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginState.html"><span class="typ">IRCPluginState</span></a></code> of the plugin.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>Methods</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ctcp/CTCPService.onEvent.html" class="public">
+									<code>onEvent</code>
+								</a>
+								<span class="tableEntryAnnotation">(event)</span>
+							</td>
+							<td>Override <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginImpl.onEvent.html" title="kameloso.plugins.ircplugin.IRCPluginImpl.onEvent"><span class="typ">IRCPluginImpl<wbr/></span><span class="pun">.</span><span class="pln">onEvent</span></a></code> and inject a server check, so this
+  plugin does nothing on Twitch servers. The function to call is
+  <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginImpl.onEventImpl.html" title="kameloso.plugins.ircplugin.IRCPluginImpl.onEventImpl"><span class="typ">IRCPluginImpl<wbr/></span><span class="pun">.</span><span class="pln">onEventImpl</span></a></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.deserialiseConfigFrom.html" class="public inherited">
+									<code>deserialiseConfigFrom</code>
+								</a>
+								<span class="tableEntryAnnotation">(, , )</span>
+							</td>
+							<td>Read serialised configuration text into the plugin's settings struct.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.initResources.html" class="public inherited">
+									<code>initResources</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when the plugin is requested to initialise its disk resources.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.onBusMessage.html" class="public inherited">
+									<code>onBusMessage</code>
+								</a>
+								<span class="tableEntryAnnotation">(, content)</span>
+							</td>
+							<td>Executed when a bus message arrives from another plugin.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.onEvent.html" class="public inherited">
+									<code>onEvent</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed upon new IRC event parsed from the server.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.periodically.html" class="public inherited">
+									<code>periodically</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Call a plugin to perform its periodic tasks, iff the time is equal to or
+  exceeding <code class="lang-d"><span class="pln">nextPeriodical</span></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.postprocess.html" class="public inherited">
+									<code>postprocess</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed to let plugins modify an event mid-parse.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.printSettings.html" class="public inherited">
+									<code>printSettings</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when we want a plugin to print its Settings struct.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.reload.html" class="public inherited">
+									<code>reload</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Reloads the plugin, where such is applicable.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.serialiseConfigInto.html" class="public inherited">
+									<code>serialiseConfigInto</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when gathering things to put in the configuration file.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.setSettingByName.html" class="public inherited">
+									<code>setSettingByName</code>
+								</a>
+								<span class="tableEntryAnnotation">(, )</span>
+							</td>
+							<td>Executed during start if we want to change a setting by its string name.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.start.html" class="public inherited">
+									<code>start</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when connection has been established.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.teardown.html" class="public inherited">
+									<code>teardown</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed during shutdown or plugin restart.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>Properties</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.commands.html" class="public inherited property"><code>commands</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">plugins<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="typ">Description</span><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span></code></td><td>Returns an array of the descriptions of the commands a plugin offers.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.isEnabled.html" class="public inherited property"><code>isEnabled</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Returns whether or not the plugin is enabled in its configuration section.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.name.html" class="public inherited property"><code>name</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Returns the name of the plugin, sliced off the module name.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.state.html" class="public inherited property"><code>state</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">inout</span><span class="pun">(</span><a href="../../../kameloso/plugins/ircplugin/IRCPluginState.html"><span class="typ">IRCPluginState</span></a><span class="pun">)</span></code></td><td>Returns a reference to the current <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginState.html"><span class="typ">IRCPluginState</span></a></code> of the plugin.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>Methods</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ctcp/CTCPService.onEvent.html" class="public">
+									<code>onEvent</code>
+								</a>
+								<span class="tableEntryAnnotation">(event)</span>
+							</td>
+							<td>Override <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginImpl.onEvent.html" title="kameloso.plugins.ircplugin.IRCPluginImpl.onEvent"><span class="typ">IRCPluginImpl<wbr/></span><span class="pun">.</span><span class="pln">onEvent</span></a></code> and inject a server check, so this
+  plugin does nothing on Twitch servers. The function to call is
+  <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginImpl.onEventImpl.html" title="kameloso.plugins.ircplugin.IRCPluginImpl.onEventImpl"><span class="typ">IRCPluginImpl<wbr/></span><span class="pun">.</span><span class="pln">onEventImpl</span></a></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.deserialiseConfigFrom.html" class="public inherited">
+									<code>deserialiseConfigFrom</code>
+								</a>
+								<span class="tableEntryAnnotation">(, , )</span>
+							</td>
+							<td>Read serialised configuration text into the plugin's settings struct.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.initResources.html" class="public inherited">
+									<code>initResources</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when the plugin is requested to initialise its disk resources.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.onBusMessage.html" class="public inherited">
+									<code>onBusMessage</code>
+								</a>
+								<span class="tableEntryAnnotation">(, content)</span>
+							</td>
+							<td>Executed when a bus message arrives from another plugin.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.onEvent.html" class="public inherited">
+									<code>onEvent</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed upon new IRC event parsed from the server.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.periodically.html" class="public inherited">
+									<code>periodically</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Call a plugin to perform its periodic tasks, iff the time is equal to or
+  exceeding <code class="lang-d"><span class="pln">nextPeriodical</span></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.postprocess.html" class="public inherited">
+									<code>postprocess</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed to let plugins modify an event mid-parse.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.printSettings.html" class="public inherited">
+									<code>printSettings</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when we want a plugin to print its Settings struct.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.reload.html" class="public inherited">
+									<code>reload</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Reloads the plugin, where such is applicable.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.serialiseConfigInto.html" class="public inherited">
+									<code>serialiseConfigInto</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when gathering things to put in the configuration file.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.setSettingByName.html" class="public inherited">
+									<code>setSettingByName</code>
+								</a>
+								<span class="tableEntryAnnotation">(, )</span>
+							</td>
+							<td>Executed during start if we want to change a setting by its string name.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.start.html" class="public inherited">
+									<code>start</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when connection has been established.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.teardown.html" class="public inherited">
+									<code>teardown</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed during shutdown or plugin restart.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>Properties</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.commands.html" class="public inherited property"><code>commands</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">plugins<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="typ">Description</span><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span></code></td><td>Returns an array of the descriptions of the commands a plugin offers.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.isEnabled.html" class="public inherited property"><code>isEnabled</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Returns whether or not the plugin is enabled in its configuration section.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.name.html" class="public inherited property"><code>name</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Returns the name of the plugin, sliced off the module name.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.state.html" class="public inherited property"><code>state</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">inout</span><span class="pun">(</span><a href="../../../kameloso/plugins/ircplugin/IRCPluginState.html"><span class="typ">IRCPluginState</span></a><span class="pun">)</span></code></td><td>Returns a reference to the current <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginState.html"><span class="typ">IRCPluginState</span></a></code> of the plugin.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>Methods</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ctcp/CTCPService.onEvent.html" class="public">
+									<code>onEvent</code>
+								</a>
+								<span class="tableEntryAnnotation">(event)</span>
+							</td>
+							<td>Override <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginImpl.onEvent.html" title="kameloso.plugins.ircplugin.IRCPluginImpl.onEvent"><span class="typ">IRCPluginImpl<wbr/></span><span class="pun">.</span><span class="pln">onEvent</span></a></code> and inject a server check, so this
+  plugin does nothing on Twitch servers. The function to call is
+  <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginImpl.onEventImpl.html" title="kameloso.plugins.ircplugin.IRCPluginImpl.onEventImpl"><span class="typ">IRCPluginImpl<wbr/></span><span class="pun">.</span><span class="pln">onEventImpl</span></a></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.deserialiseConfigFrom.html" class="public inherited">
+									<code>deserialiseConfigFrom</code>
+								</a>
+								<span class="tableEntryAnnotation">(, , )</span>
+							</td>
+							<td>Read serialised configuration text into the plugin's settings struct.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.initResources.html" class="public inherited">
+									<code>initResources</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when the plugin is requested to initialise its disk resources.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.onBusMessage.html" class="public inherited">
+									<code>onBusMessage</code>
+								</a>
+								<span class="tableEntryAnnotation">(, content)</span>
+							</td>
+							<td>Executed when a bus message arrives from another plugin.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.onEvent.html" class="public inherited">
+									<code>onEvent</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed upon new IRC event parsed from the server.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.periodically.html" class="public inherited">
+									<code>periodically</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Call a plugin to perform its periodic tasks, iff the time is equal to or
+  exceeding <code class="lang-d"><span class="pln">nextPeriodical</span></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.postprocess.html" class="public inherited">
+									<code>postprocess</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed to let plugins modify an event mid-parse.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.printSettings.html" class="public inherited">
+									<code>printSettings</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when we want a plugin to print its Settings struct.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.reload.html" class="public inherited">
+									<code>reload</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Reloads the plugin, where such is applicable.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.serialiseConfigInto.html" class="public inherited">
+									<code>serialiseConfigInto</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when gathering things to put in the configuration file.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.setSettingByName.html" class="public inherited">
+									<code>setSettingByName</code>
+								</a>
+								<span class="tableEntryAnnotation">(, )</span>
+							</td>
+							<td>Executed during start if we want to change a setting by its string name.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.start.html" class="public inherited">
+									<code>start</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed when connection has been established.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/ircplugin/IRCPlugin.teardown.html" class="public inherited">
+									<code>teardown</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Executed during shutdown or plugin restart.
+</td>
+						</tr>
+					</table>
+				</section>
+				
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

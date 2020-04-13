@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Module kameloso.terminal</title>
+		<link rel="stylesheet" href="../css/style.min.css"/>
+		<script type="text/javascript" src="../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view collapsed">
+						<div class="package ">
+							<a href="../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Module kameloso.terminal</h1><p>A collection of enums and functions that relate to a terminal shell.
+</p><section><p>Much of this module has to do with terminal text colouring and is therefore
+  version <code class="lang-d"><span class="typ">Colours</span></code>.
+</p>
+</section>
+
+				<section><section><h2>Example</h2>
+<pre class="code"><code class="lang-d"><span class="typ">Appender</span><span class="pun">!</span><span class="typ">string </span><span class="pln">sink</span><span class="pun">;
+
+</span><span class="com">// Output range version
+</span><span class="pln">sink<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"Hello "</span><span class="pun">);
+</span><span class="pln">sink<wbr/></span><span class="pun">.</span><span class="pln">colourWith</span><span class="pun">(<a href="../kameloso/terminal/TerminalForeground.html#red"></span><span class="typ">TerminalForeground<wbr/></span><span class="pun">.</span><span class="pln">red</span></a><span class="pun">);
+</span><span class="pln">sink<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"world!"</span><span class="pun">);
+</span><span class="pln">sink<wbr/></span><span class="pun">.</span><span class="pln">colourWith</span><span class="pun">(<a href="../kameloso/terminal/TerminalForeground.html#default_"></span><span class="typ">TerminalForeground<wbr/></span><span class="pun">.</span><span class="pln">default_</span></a><span class="pun">);
+
+</span><span class="kwd">with </span><span class="pun">(<a href="../kameloso/terminal/TerminalForeground.html"></span><span class="typ">TerminalForeground</span></a><span class="pun">)
+{
+    </span><span class="com">// Normal string-returning version
+    </span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"Hello "</span><span class="pun">, </span><span class="pln">red<wbr/></span><span class="pun">.</span><span class="pln">colour</span><span class="pun">, </span><span class="str">"world!"</span><span class="pun">, </span><span class="pln">default_<wbr/></span><span class="pun">.</span><span class="pln">colour</span><span class="pun">);
+}
+
+</span><span class="com">// Also accepts RGB form
+</span><span class="pln">sink<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">" Also"</span><span class="pun">);
+</span><span class="pln">sink<wbr/></span><span class="pun">.</span><span class="pln">truecolour</span><span class="pun">(</span><span class="lit">128</span><span class="pun">, </span><span class="lit">128</span><span class="pun">, </span><span class="lit">255</span><span class="pun">);
+</span><span class="pln">sink<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"magic"</span><span class="pun">);
+</span><span class="pln">sink<wbr/></span><span class="pun">.</span><span class="pln">colourWith</span><span class="pun">(<a href="../kameloso/terminal/TerminalForeground.html#default_"></span><span class="typ">TerminalForeground<wbr/></span><span class="pun">.</span><span class="pln">default_</span></a><span class="pun">);
+
+</span><span class="kwd">with </span><span class="pun">(<a href="../kameloso/terminal/TerminalForeground.html"></span><span class="typ">TerminalForeground</span></a><span class="pun">)
+{
+    </span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"Also "</span><span class="pun">, <a href="../kameloso/terminal/truecolour.html"></span><span class="pln">truecolour</span></a><span class="pun">(</span><span class="lit">128</span><span class="pun">, </span><span class="lit">128</span><span class="pun">, </span><span class="lit">255</span><span class="pun">), </span><span class="str">"magic"</span><span class="pun">, </span><span class="pln">default_<wbr/></span><span class="pun">.</span><span class="pln">colour</span><span class="pun">);
+}
+
+</span><span class="kwd">immutable </span><span class="pln">line </span><span class="pun">= </span><span class="str">"Surrounding text kameloso surrounding text"</span><span class="pun">;
+</span><span class="kwd">immutable </span><span class="pln">kamelosoInverted </span><span class="pun">= </span><span class="pln">line<wbr/></span><span class="pun">.</span><span class="pln">invert</span><span class="pun">(</span><span class="str">"kameloso"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">line </span><span class="pun">!= </span><span class="pln">kamelosoInverted</span><span class="pun">);
+
+</span><span class="kwd">immutable </span><span class="pln">tintedNickname </span><span class="pun">= </span><span class="str">"nickname"<a href="../kameloso/terminal/colourByHash.html"></span><wbr/><span class="pun">.</span><span class="pln">colourByHash</span></a><span class="pun">(</span><span class="kwd">false</span><span class="pun">);   </span><span class="com">// "for bright background" false
+</span><span class="kwd">immutable </span><span class="pln">tintedSubstring </span><span class="pun">= </span><span class="str">"substring"<a href="../kameloso/terminal/colourByHash.html"></span><wbr/><span class="pun">.</span><span class="pln">colourByHash</span></a><span class="pun">(</span><span class="kwd">true</span><span class="pun">);  </span><span class="com">// "for bright background" true</span></code></pre>
+
+<p>  It is used heavily in the Printer plugin, to format sections of its output
+  in different colours, but it's generic enough to use anywhere.
+</p>
+
+<p>  The output range versions are cumbersome but necessary to minimise the number
+  of strings generated.
+</p>
+</section>
+</section>
+				<section>
+					<h2>Functions</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="colour" class="public" href="../kameloso/terminal/colour.html">colour</a><span class="tableEntryAnnotation">(codes)</span>
+								</code>
+							</td>
+							<td>Takes a mix of a <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html"><span class="typ">TerminalForeground</span></a></code>, a <code class="lang-d"><a href="../kameloso/terminal/TerminalBackground.html"><span class="typ">TerminalBackground</span></a></code>, a
+  <code class="lang-d"><a href="../kameloso/terminal/TerminalFormat.html"><span class="typ">TerminalFormat</span></a></code> and/or a <code class="lang-d"><a href="../kameloso/terminal/TerminalReset.html"><span class="typ">TerminalReset</span></a></code> and composes them into a single
+  terminal format code token. Overload that creates an <code class="lang-d"><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">array<wbr/></span><span class="pun">.</span><span class="typ">Appender</span></code>
+  and fills it with the return value of the output range version of <code class="lang-d"><span class="pln">colour</span></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="colour" class="public" href="../kameloso/terminal/colour.html">colour</a><span class="tableEntryAnnotation">(text, codes)</span>
+								</code>
+							</td>
+							<td>Convenience function to colour or format a piece of text without an output
+  buffer to fill into.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="colour" class="public" href="../kameloso/terminal/colour.html">colour</a><span class="tableEntryAnnotation">(codes)</span>
+								</code>
+							</td>
+							<td>Takes a mix of a <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html"><span class="typ">TerminalForeground</span></a></code>, a <code class="lang-d"><a href="../kameloso/terminal/TerminalBackground.html"><span class="typ">TerminalBackground</span></a></code>, a
+  <code class="lang-d"><a href="../kameloso/terminal/TerminalFormat.html"><span class="typ">TerminalFormat</span></a></code> and/or a <code class="lang-d"><a href="../kameloso/terminal/TerminalReset.html"><span class="typ">TerminalReset</span></a></code> and composes them into a single
+  terminal format code token. Overload that creates an <code class="lang-d"><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">array<wbr/></span><span class="pun">.</span><span class="typ">Appender</span></code>
+  and fills it with the return value of the output range version of <code class="lang-d"><a href="../kameloso/terminal/colour.html"><span class="pln">colour</span></a></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="colour" class="public" href="../kameloso/terminal/colour.html">colour</a><span class="tableEntryAnnotation">(text, codes)</span>
+								</code>
+							</td>
+							<td>Convenience function to colour or format a piece of text without an output
+  buffer to fill into.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="colourByHash" class="public" href="../kameloso/terminal/colourByHash.html">colourByHash</a><span class="tableEntryAnnotation">(word, fgArray)</span>
+								</code>
+							</td>
+							<td>Hashes the passed string and picks a <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html"><span class="typ">TerminalForeground</span></a></code> colour by modulo.
+  Overload that takes an array of <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html"><span class="typ">TerminalForeground</span></a></code>s, to pick between.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="colourByHash" class="public" href="../kameloso/terminal/colourByHash.html">colourByHash</a><span class="tableEntryAnnotation">(word, bright)</span>
+								</code>
+							</td>
+							<td>Hashes the passed string and picks a <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html"><span class="typ">TerminalForeground</span></a></code> colour by modulo.
+  Overload that picks any colour, taking care not to pick black or white based on
+  the value of the passed <code class="lang-d"><a href="../kameloso/terminal/colourByHash.html#bright"><span class="pln">bright</span></a></code> bool (which signifies a bright terminal background).
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="colourByHash" class="public" href="../kameloso/terminal/colourByHash.html">colourByHash</a><span class="tableEntryAnnotation">(word, bright)</span>
+								</code>
+							</td>
+							<td>Hashes the passed string and picks a <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html"><span class="typ">TerminalForeground</span></a></code> colour by modulo.
+  Overload that picks any colour, taking care not to pick black or white based on
+  the value of the passed <code class="lang-d"><a href="../kameloso/terminal/colourByHash.html#bright"><span class="pln">bright</span></a></code> bool (which signifies a bright terminal background).
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="colourByHash" class="public" href="../kameloso/terminal/colourByHash.html">colourByHash</a><span class="tableEntryAnnotation">(word, fgArray)</span>
+								</code>
+							</td>
+							<td>Hashes the passed string and picks a <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html"><span class="typ">TerminalForeground</span></a></code> colour by modulo.
+  Overload that takes an array of <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html"><span class="typ">TerminalForeground</span></a></code>s, to pick between.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="colourByHash" class="public" href="../kameloso/terminal/colourByHash.html">colourByHash</a><span class="tableEntryAnnotation">(word, bright)</span>
+								</code>
+							</td>
+							<td>Hashes the passed string and picks a <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html"><span class="typ">TerminalForeground</span></a></code> colour by modulo.
+  Overload that picks any colour, taking care not to pick black or white based on
+  the value of the passed <code class="lang-d"><a href="../kameloso/terminal/colourByHash.html#bright"><span class="pln">bright</span></a></code> bool (which signifies a bright terminal background).
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="colourByHash" class="public" href="../kameloso/terminal/colourByHash.html">colourByHash</a><span class="tableEntryAnnotation">(word, bright)</span>
+								</code>
+							</td>
+							<td>Hashes the passed string and picks a <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html"><span class="typ">TerminalForeground</span></a></code> colour by modulo.
+  Overload that picks any colour, taking care not to pick black or white based on
+  the value of the passed <code class="lang-d"><a href="../kameloso/terminal/colourByHash.html#bright"><span class="pln">bright</span></a></code> bool (which signifies a bright terminal background).
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="colourWith" class="public" href="../kameloso/terminal/colourWith.html">colourWith</a><span class="tableEntryAnnotation">(sink, codes)</span>
+								</code>
+							</td>
+							<td>Takes a mix of a <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html"><span class="typ">TerminalForeground</span></a></code>, a <code class="lang-d"><a href="../kameloso/terminal/TerminalBackground.html"><span class="typ">TerminalBackground</span></a></code>, a
+  <code class="lang-d"><a href="../kameloso/terminal/TerminalFormat.html"><span class="typ">TerminalFormat</span></a></code> and/or a <code class="lang-d"><a href="../kameloso/terminal/TerminalReset.html"><span class="typ">TerminalReset</span></a></code> and composes them into a format code token.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="colourWith" class="public" href="../kameloso/terminal/colourWith.html">colourWith</a><span class="tableEntryAnnotation">(sink, codes)</span>
+								</code>
+							</td>
+							<td>Takes a mix of a <code class="lang-d"><a href="../kameloso/terminal/TerminalForeground.html"><span class="typ">TerminalForeground</span></a></code>, a <code class="lang-d"><a href="../kameloso/terminal/TerminalBackground.html"><span class="typ">TerminalBackground</span></a></code>, a
+  <code class="lang-d"><a href="../kameloso/terminal/TerminalFormat.html"><span class="typ">TerminalFormat</span></a></code> and/or a <code class="lang-d"><a href="../kameloso/terminal/TerminalReset.html"><span class="typ">TerminalReset</span></a></code> and composes them into a format code token.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="invert" class="public" href="../kameloso/terminal/invert.html">invert</a><span class="tableEntryAnnotation">(line, toInvert)</span>
+								</code>
+							</td>
+							<td>Terminal-inverts the colours of a piece of text in a string.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="invert" class="public" href="../kameloso/terminal/invert.html">invert</a><span class="tableEntryAnnotation">(line, toInvert)</span>
+								</code>
+							</td>
+							<td>Terminal-inverts the colours of a piece of text in a string.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="invert" class="public" href="../kameloso/terminal/invert.html">invert</a><span class="tableEntryAnnotation">(line, toInvert)</span>
+								</code>
+							</td>
+							<td>Terminal-inverts the colours of a piece of text in a string.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="invert" class="public" href="../kameloso/terminal/invert.html">invert</a><span class="tableEntryAnnotation">(line, toInvert)</span>
+								</code>
+							</td>
+							<td>Terminal-inverts the colours of a piece of text in a string.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="normaliseColours" class="public" href="../kameloso/terminal/normaliseColours.html">normaliseColours</a><span class="tableEntryAnnotation">(r, g, b)</span>
+								</code>
+							</td>
+							<td>Takes a colour and, if it deems it is too dark to see on a black terminal
+  background, makes it brighter.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="normaliseColours" class="public" href="../kameloso/terminal/normaliseColours.html">normaliseColours</a><span class="tableEntryAnnotation">(r, g, b)</span>
+								</code>
+							</td>
+							<td>Takes a colour and, if it deems it is too dark to see on a black terminal
+  background, makes it brighter.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="normaliseColoursBright" class="public" href="../kameloso/terminal/normaliseColoursBright.html">normaliseColoursBright</a><span class="tableEntryAnnotation">(r, g, b)</span>
+								</code>
+							</td>
+							<td>Takes a colour and, if it deems it is too bright to see on a light terminal
+  background, makes it darker.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="normaliseColoursBright" class="public" href="../kameloso/terminal/normaliseColoursBright.html">normaliseColoursBright</a><span class="tableEntryAnnotation">(r, g, b)</span>
+								</code>
+							</td>
+							<td>Takes a colour and, if it deems it is too bright to see on a light terminal
+  background, makes it darker.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="resetConsoleModeAndCodepage" class="public" href="../kameloso/terminal/resetConsoleModeAndCodepage.html">resetConsoleModeAndCodepage</a><span class="tableEntryAnnotation">()</span>
+								</code>
+							</td>
+							<td>Resets the console codepage and console mode to the values they had at
+  program start.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="setConsoleModeAndCodepage" class="public" href="../kameloso/terminal/setConsoleModeAndCodepage.html">setConsoleModeAndCodepage</a><span class="tableEntryAnnotation">()</span>
+								</code>
+							</td>
+							<td>Sets the console codepage to display UTF-8 characters (åäö, 高所恐怖症, ...)
+  and the console mode to display terminal colours.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="setTitle" class="public" href="../kameloso/terminal/setTitle.html">setTitle</a><span class="tableEntryAnnotation">(title)</span>
+								</code>
+							</td>
+							<td>Sets the terminal title to a given string. Supposedly.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="truecolour" class="public" href="../kameloso/terminal/truecolour.html">truecolour</a><span class="tableEntryAnnotation">(sink, r, g, b, bright)</span>
+								</code>
+							</td>
+							<td>Produces a terminal colour token for the colour passed, expressed in terms
+  of red, green and blue.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="truecolour" class="public" href="../kameloso/terminal/truecolour.html">truecolour</a><span class="tableEntryAnnotation">(word, r, g, b, bright)</span>
+								</code>
+							</td>
+							<td>Convenience function to colour a piece of text without being passed an
+  output sink to fill into.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="truecolour" class="public" href="../kameloso/terminal/truecolour.html">truecolour</a><span class="tableEntryAnnotation">(word, r, g, b, bright)</span>
+								</code>
+							</td>
+							<td>Convenience function to colour a piece of text without being passed an
+  output sink to fill into.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="truecolour" class="public" href="../kameloso/terminal/truecolour.html">truecolour</a><span class="tableEntryAnnotation">(sink, r, g, b, bright)</span>
+								</code>
+							</td>
+							<td>Produces a terminal colour token for the colour passed, expressed in terms
+  of red, green and blue.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="truecolour" class="public" href="../kameloso/terminal/truecolour.html">truecolour</a><span class="tableEntryAnnotation">(word, r, g, b, bright)</span>
+								</code>
+							</td>
+							<td>Convenience function to colour a piece of text without being passed an
+  output sink to fill into.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="truecolour" class="public" href="../kameloso/terminal/truecolour.html">truecolour</a><span class="tableEntryAnnotation">(word, r, g, b, bright)</span>
+								</code>
+							</td>
+							<td>Convenience function to colour a piece of text without being passed an
+  output sink to fill into.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Enums</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TerminalBackground" class="public" href="../kameloso/terminal/TerminalBackground.html">TerminalBackground</a>
+								</code>
+							</td>
+							<td>Background colour codes for terminal colouring.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TerminalBackground" class="public" href="../kameloso/terminal/TerminalBackground.html">TerminalBackground</a>
+								</code>
+							</td>
+							<td>Background colour codes for terminal colouring.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TerminalForeground" class="public" href="../kameloso/terminal/TerminalForeground.html">TerminalForeground</a>
+								</code>
+							</td>
+							<td>Foreground colour codes for terminal colouring.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TerminalForeground" class="public" href="../kameloso/terminal/TerminalForeground.html">TerminalForeground</a>
+								</code>
+							</td>
+							<td>Foreground colour codes for terminal colouring.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TerminalFormat" class="public" href="../kameloso/terminal/TerminalFormat.html">TerminalFormat</a>
+								</code>
+							</td>
+							<td>Format codes that work like terminal colouring does, except here for formats
+  like bold, dim, italics, etc.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TerminalFormat" class="public" href="../kameloso/terminal/TerminalFormat.html">TerminalFormat</a>
+								</code>
+							</td>
+							<td>Format codes that work like terminal colouring does, except here for formats
+  like bold, dim, italics, etc.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TerminalReset" class="public" href="../kameloso/terminal/TerminalReset.html">TerminalReset</a>
+								</code>
+							</td>
+							<td>Terminal colour/format reset codes.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TerminalReset" class="public" href="../kameloso/terminal/TerminalReset.html">TerminalReset</a>
+								</code>
+							</td>
+							<td>Terminal colour/format reset codes.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TerminalToken" class="public" href="../kameloso/terminal/TerminalToken.html">TerminalToken</a>
+								</code>
+							</td>
+							<td>Special terminal control characters.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Manifest constants</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a id="isAColourCode" class="public" href="../kameloso/terminal/isAColourCode.html">
+									<code>isAColourCode</code>
+								</a>
+							</td>
+							<td>
+							</td>
+							<td>Bool of whether or not a type is a colour code enum.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a id="isAColourCode" class="public" href="../kameloso/terminal/isAColourCode.html">
+									<code>isAColourCode</code>
+								</a>
+							</td>
+							<td>
+							</td>
+							<td>Bool of whether or not a type is a colour code enum.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Global variables</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a id="originalConsoleMode" class="public" href="../kameloso/terminal/originalConsoleMode.html">
+									<code>originalConsoleMode</code>
+								</a>
+							</td>
+							<td>
+								<code class="prettyprint lang-d"><span class="typ">uint</span></code>
+							</td>
+							<td>Original console mode at program start.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a id="originalCP" class="public" href="../kameloso/terminal/originalCP.html">
+									<code>originalCP</code>
+								</a>
+							</td>
+							<td>
+								<code class="prettyprint lang-d"><span class="typ">uint</span></code>
+							</td>
+							<td>Original codepage at program start.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a id="originalOutputCP" class="public" href="../kameloso/terminal/originalOutputCP.html">
+									<code>originalOutputCP</code>
+								</a>
+							</td>
+							<td>
+								<code class="prettyprint lang-d"><span class="typ">uint</span></code>
+							</td>
+							<td>Original output codepage at program start.
+</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

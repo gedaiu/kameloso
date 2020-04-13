@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Module kameloso.plugins.sedreplace</title>
+		<link rel="stylesheet" href="../../css/style.min.css"/>
+		<script type="text/javascript" src="../../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">
+							<a href="../../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Module kameloso.plugins.sedreplace</h1><p>The SedReplace plugin imitates the UNIX <code class="lang-d"><span class="pln">sed</span></code> tool, allowing for the
+  replacement/substitution of text. It does not require the tool itself though,
+  and will work on Windows too.
+</p><section><pre class="code"><code class="lang-d"><span class="pun">$ </span><span class="pln">echo </span><span class="str">"foo bar baz" </span><span class="pun">| </span><span class="pln">sed </span><span class="str">"s/bar/qux/"
+</span><span class="pln">foo qux baz</span></code></pre>
+
+<p>  It has no bot commands, as everything is done by scanning messages for signs
+  of <code class="lang-d"><span class="pln">s</span><span class="pun">/</span><span class="kwd">this</span><span class="pun">/</span><span class="pln">that</span><span class="pun">/</span></code> patterns.
+</p>
+
+<p>  It supports a delimiter of <code class="lang-d"><span class="pun">/</span></code>, <code class="lang-d"><span class="pun">|</span></code>, <code class="lang-d"><span class="pln">#</span></code>, <code class="lang-d"><span class="pun">@</span></code>, <code class="lang-d"><span class="pln"> </span></code>, <code class="lang-d"><span class="pln">_</span></code> and <code class="lang-d"><span class="pun">;</span></code>, but more
+  can be trivially added.
+</p>
+
+<p>  You can also end it with a <code class="lang-d"><span class="pln">g</span></code> to set the global flag, to have more than one
+  match substituted.
+</p>
+
+<pre class="code"><code class="lang-d"><span class="pun">$ </span><span class="pln">echo </span><span class="str">"foo bar baz" </span><span class="pun">| </span><span class="pln">sed </span><span class="str">"s/bar/qux/g"
+</span><span class="pun">$ </span><span class="pln">echo </span><span class="str">"foo bar baz" </span><span class="pun">| </span><span class="pln">sed </span><span class="str">"s|bar|qux|g"
+</span><span class="pun">$ </span><span class="pln">echo </span><span class="str">"foo bar baz" </span><span class="pun">| </span><span class="pln">sed </span><span class="str">"s#bar#qux#g"
+</span><span class="pun">$ </span><span class="pln">echo </span><span class="str">"foo bar baz" </span><span class="pun">| </span><span class="pln">sed </span><span class="str">"s@bar@qux@"
+</span><span class="pun">$ </span><span class="pln">echo </span><span class="str">"foo bar baz" </span><span class="pun">| </span><span class="pln">sed </span><span class="str">"s bar qux "
+</span><span class="pun">$ </span><span class="pln">echo </span><span class="str">"foo bar baz" </span><span class="pun">| </span><span class="pln">sed </span><span class="str">"s;bar;qux"  </span><span class="com">// only if relaxSyntax is true</span></code></pre>
+</section>
+
+				<section></section>
+				<section>
+					<h2>Classes</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="SedReplacePlugin" class="public" href="../../kameloso/plugins/sedreplace/SedReplacePlugin.html">SedReplacePlugin</a>
+								</code>
+							</td>
+							<td>The SedReplace plugin stores a buffer of the last said line of every user,
+  and if a new message comes in with a sed-replace-like pattern in it, tries
+  to apply it on the original message as a regex-like replace.
+</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

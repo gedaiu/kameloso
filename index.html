@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>API documentation</title>
+		<link rel="stylesheet" href="./css/style.min.css"/>
+		<script type="text/javascript" src="./js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view collapsed">
+						<div class="package ">
+							<a href="./kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="./kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>API documentation</h1>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Module</th><th>Description</th>
+					</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/admin.html">kameloso.plugins.admin</a>
+					</td>
+					<td>
+						The Admin plugin features bot commands which help with debugging the current
+  state of the running bot, like printing the current list of users, the
+  current channels, the raw incoming strings from the server, and some other
+  things along the same line.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/automode.html">kameloso.plugins.automode</a>
+					</td>
+					<td>
+						The Automode plugin handles automatically setting the modes of users in a
+  channel. The common use-case is to have someone be automatically set to <code class="lang-d"><span class="pun">+</span><span class="pln">o</span></code>
+  (operator) when joining.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/awareness.html">kameloso.plugins.awareness</a>
+					</td>
+					<td>
+						Awareness mixins, for plugins to mix in to extend behaviour and enjoy a
+  considerable degree of automation.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/chanqueries.html">kameloso.plugins.chanqueries</a>
+					</td>
+					<td>
+						The Channel Queries service queries channels for information about them (in
+  terms of topic and modes) as well as their lists of participants. It does this
+  shortly after having joined a channel, as a service to all other plugins,
+  so they don't each have to repeat it themselves.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/chatbot.html">kameloso.plugins.chatbot</a>
+					</td>
+					<td>
+						The Chatbot plugin is a collection of small, harmless functions like <code class="lang-d"><span class="lit">8</span><span class="pln">ball</span></code>
+  for magic eightball, <code class="lang-d"><span class="pln">bash</span></code> for fetching specified or random bash.org quotes,
+  and <code class="lang-d"><span class="pln">say</span></code>/<code class="lang-d"><span class="pln">echo</span></code> for simple repeating of text.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/common.html">kameloso.plugins.common</a>
+					</td>
+					<td>
+						The is not a plugin by itself but contains code common to all plugins,
+  without which they will *not* function.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/connect.html">kameloso.plugins.connect</a>
+					</td>
+					<td>
+						The Connect service handles logging onto IRC servers after having connected,
+  as well as managing authentication to services. It also manages responding
+  to <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="pln">PING</span></code> requests, and capability negotiations.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/ctcp.html">kameloso.plugins.ctcp</a>
+					</td>
+					<td>
+						The CTCP service handles responding to CTCP (client-to-client protocol)
+  requests behind the scenes.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/help.html">kameloso.plugins.help</a>
+					</td>
+					<td>
+						The Help plugin serves the <code class="lang-d"><span class="pln">help</span></code> command, and nothing else at this point.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/ircplugin.html">kameloso.plugins.ircplugin</a>
+					</td>
+					<td>
+						Contains the definition of an <code class="lang-d"><a href="./kameloso/plugins/ircplugin/IRCPlugin.html"><span class="typ">IRCPlugin</span></a></code>, as well as a mixin <code class="lang-d"><a href="./kameloso/plugins/ircplugin/IRCPluginImpl.html"><span class="typ">IRCPluginImpl</span></a></code>
+  to fully implement one.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/notes.html">kameloso.plugins.notes</a>
+					</td>
+					<td>
+						The Notes plugin allows for storing notes to offline users, to be replayed
+  when they next join the channel.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/oneliners.html">kameloso.plugins.oneliners</a>
+					</td>
+					<td>
+						The Oneliners plugin serves to provide custom commands, like <code class="lang-d"><span class="pun">!</span><span class="pln">vods</span></code>, <code class="lang-d"><span class="pun">!</span><span class="pln">youtube</span></code>,
+  and any other static-reply <code class="lang-d"><span class="pun">!</span><span class="pln">command</span></code> (provided a prefix of "<code class="lang-d"><span class="pun">!</span></code>").
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/persistence.html">kameloso.plugins.persistence</a>
+					</td>
+					<td>
+						The Persistence service keeps track of all encountered users, gathering as much
+  information about them as possible, then injects them into
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>s when information about them is incomplete.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/pipeline.html">kameloso.plugins.pipeline</a>
+					</td>
+					<td>
+						The Pipeline plugin opens a Posix named pipe in the current directory, to
+  which you can pipe text and have it be sent verbatim to the server.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/printer.html">kameloso.plugins.printer</a>
+					</td>
+					<td>
+						The Printer plugin takes incoming <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent</span></code>s, formats them
+  into something easily readable and prints them to the screen, optionally with colours.
+  It also supports logging to disk.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/quotes.html">kameloso.plugins.quotes</a>
+					</td>
+					<td>
+						The Quotes plugin allows for saving and replaying user quotes.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/sedreplace.html">kameloso.plugins.sedreplace</a>
+					</td>
+					<td>
+						The SedReplace plugin imitates the UNIX <code class="lang-d"><span class="pln">sed</span></code> tool, allowing for the
+  replacement/substitution of text. It does not require the tool itself though,
+  and will work on Windows too.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/seen.html">kameloso.plugins.seen</a>
+					</td>
+					<td>
+						The Seen plugin implements "seen" functionality; the ability for someone to
+  query when a given nickname was last seen online.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/twitchbot.html">kameloso.plugins.twitchbot</a>
+					</td>
+					<td>
+						This is an example Twitch streamer bot. It supports querying uptime or how
+  long a streamer has been live, banned phrases, timered announcements and
+  voting.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins/webtitles.html">kameloso.plugins.webtitles</a>
+					</td>
+					<td>
+						The Webtitles plugin catches URLs pasted in a channel, follows them and
+  reports back the title of the web page that was linked to.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/common.html">kameloso.common</a>
+					</td>
+					<td>
+						Common functions used throughout the program, generic enough to be used in
+  several places, not fitting into any specific one.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/config.html">kameloso.config</a>
+					</td>
+					<td>
+						Functionality related to configuration; verifying it, correcting it, and
+  reading it from/writing it to disk.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/constants.html">kameloso.constants</a>
+					</td>
+					<td>
+						A collection of constants used throughout the program.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/getopt.html">kameloso.getopt</a>
+					</td>
+					<td>
+						Basic command-line argument-handling.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/irccolours.html">kameloso.irccolours</a>
+					</td>
+					<td>
+						Functions related to IRC colouring and formatting, mapping it to ANSI
+  terminal such, stripping it, etc.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/kameloso.html">kameloso.kameloso</a>
+					</td>
+					<td>
+						The main module, housing startup logic and the main event loop.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/logger.html">kameloso.logger</a>
+					</td>
+					<td>
+						Contains the custom <code class="lang-d"><a href="./kameloso/logger/KamelosoLogger.html"><span class="typ">KamelosoLogger</span></a></code> class, used to print timestamped and
+  (optionally) coloured logging messages.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/main.html">kameloso.main</a>
+					</td>
+					<td>
+						Dummy main module so the main <code class="lang-d"><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">d</span></code> gets tested by dub.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/messaging.html">kameloso.messaging</a>
+					</td>
+					<td>
+						Functions used to send messages to the server.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/platform.html">kameloso.platform</a>
+					</td>
+					<td>
+						Functions that deal with OS- and/or platform-specifics.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/plugins.html">kameloso.plugins</a>
+					</td>
+					<td>
+						This <code class="lang-d"><span class="kwd">package</span></code> file contains the lists of enabled plugins (<code class="lang-d"><a href="./kameloso/plugins/EnabledPlugins.html"><span class="typ">EnabledPlugins</span></a></code>,
+  <code class="lang-d"><a href="./kameloso/plugins/EnabledWebPlugins.html"><span class="typ">EnabledWebPlugins</span></a></code> and <code class="lang-d"><a href="./kameloso/plugins/EnabledPosixPlugins.html"><span class="typ">EnabledPosixPlugins</span></a></code>) to which you append your
+  plugin to have it be instantiated and included in the bot's normal routines.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/printing.html">kameloso.printing</a>
+					</td>
+					<td>
+						Functions related to (formatting and) printing structs and classes to the
+  local terminal, listing each member variable and their contents in an
+  easy-to-visually-parse way.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/semver.html">kameloso.semver</a>
+					</td>
+					<td>
+						SemVer information about the current release.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/terminal.html">kameloso.terminal</a>
+					</td>
+					<td>
+						A collection of enums and functions that relate to a terminal shell.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/thread.html">kameloso.thread</a>
+					</td>
+					<td>
+						Structures and functions related to concurrency message passing, threads and
+  <code class="lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">thread<wbr/></span><span class="pun">.</span><span class="typ">Fiber</span></code>s.
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="./kameloso/traits.html">kameloso.traits</a>
+					</td>
+					<td>
+						Various traits that are too kameloso-specific to be in lu.
+
+					</td>
+				</tr>
+				</table>
+			</div>
+			<footer>
+				<div id="license-info"></div>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Module kameloso.plugins.seen</title>
+		<link rel="stylesheet" href="../../css/style.min.css"/>
+		<script type="text/javascript" src="../../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">
+							<a href="../../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Module kameloso.plugins.seen</h1><p>The Seen plugin implements "seen" functionality; the ability for someone to
+  query when a given nickname was last seen online.
+</p><section><p>We will implement this by keeping an internal <code class="lang-d"><span class="typ">long</span><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span></code> associative
+  array of timestamps keyed by nickname. Whenever we see a user do something,
+  we will update his or her timestamp to the current time. We'll save this
+  array to disk when closing the program and read it from file when starting
+  it, as well as saving occasionally once every few (configurable) hours.
+</p>
+
+<p>  We will rely on the <code class="lang-d"><a href="../../kameloso/plugins/chanqueries/ChanQueriesService.html" title="kameloso.plugins.chanqueries.ChanQueriesService"><span class="typ">ChanQueriesService</span></a></code> to query
+  channels for full lists of users upon joining new ones, including the
+  ones we join upon connecting. Elsewise, a completely silent user will never
+  be recorded as having been seen, as they would never be triggering any of
+  the functions we define to listen to.
+</p>
+
+<p>  kameloso does primarily not use callbacks, but instead annotates functions
+  with <code class="lang-d"><span class="pln">UDA</span></code>s of IRC event *types*. When an event is incoming it will trigger
+  the function(s) annotated with its type.
+</p>
+
+<p>  Callback <code class="lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">thread<wbr/></span><span class="pun">.</span><span class="typ">Fiber</span></code>s *are* supported. They can be registered to
+  process on incoming events, or scheduled with a worst-case precision of
+  <code class="lang-d"><span class="pln">lu<wbr/></span><span class="pun">.</span><span class="pln">net<wbr/></span><span class="pun">.</span><span class="typ">DefaultTimeout<wbr/></span><span class="pun">.</span><span class="pln">receive</span></code> milliseconds, plus up to
+  <code class="lang-d"><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">plugins<wbr/></span><span class="pun">.</span><span class="kwd">package<wbr/></span><span class="pun">.</span><span class="typ">EnabledPlugins<wbr/></span><span class="pun">.</span><span class="pln">length</span></code> number of plugins' event
+  handling execution time. Generally the latter is insignificant.
+</p>
+
+<p>  See the GitHub wiki for more information about available commands:<br>
+  - https://github.com/zorael/kameloso/wiki/Current-plugins#seen
+</p>
+</section>
+
+				<section></section>
+				<section>
+					<h2>Functions</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onBusMessage" class="public" href="../../kameloso/plugins/seen/onBusMessage.html">onBusMessage</a><span class="tableEntryAnnotation">(plugin, header, content)</span>
+								</code>
+							</td>
+							<td>Receives a passed <code class="lang-d"><a href="../../kameloso/thread/BusMessage.html" title="kameloso.thread.BusMessage"><span class="typ">BusMessage</span></a></code> with the "<code class="lang-d"><span class="pln">seen</span></code>" header,
+  and calls functions based on the payload message.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onBusMessage" class="public" href="../../kameloso/plugins/seen/onBusMessage.html">onBusMessage</a><span class="tableEntryAnnotation">(plugin, header, content)</span>
+								</code>
+							</td>
+							<td>Receives a passed <code class="lang-d"><a href="../../kameloso/thread/BusMessage.html" title="kameloso.thread.BusMessage"><span class="typ">BusMessage</span></a></code> with the "<code class="lang-d"><span class="pln">seen</span></code>" header,
+  and calls functions based on the payload message.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onBusMessage" class="public" href="../../kameloso/plugins/seen/onBusMessage.html">onBusMessage</a><span class="tableEntryAnnotation">(plugin, header, content)</span>
+								</code>
+							</td>
+							<td>Receives a passed <code class="lang-d"><a href="../../kameloso/thread/BusMessage.html" title="kameloso.thread.BusMessage"><span class="typ">BusMessage</span></a></code> with the "<code class="lang-d"><span class="pln">seen</span></code>" header,
+  and calls functions based on the payload message.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onBusMessage" class="public" href="../../kameloso/plugins/seen/onBusMessage.html">onBusMessage</a><span class="tableEntryAnnotation">(plugin, header, content)</span>
+								</code>
+							</td>
+							<td>Receives a passed <code class="lang-d"><a href="../../kameloso/thread/BusMessage.html" title="kameloso.thread.BusMessage"><span class="typ">BusMessage</span></a></code> with the "<code class="lang-d"><span class="pln">seen</span></code>" header,
+  and calls functions based on the payload message.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Classes</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="SeenPlugin" class="public" href="../../kameloso/plugins/seen/SeenPlugin.html">SeenPlugin</a>
+								</code>
+							</td>
+							<td>This is your plugin to the outside world, the only thing visible in the
+  entire module. It only serves as a way of proxying calls to our top-level
+  private functions, as well as to house plugin-private variables that we want
+  to keep out of top-level scope for the sake of modularity. If the only state
+  is in the plugin, several plugins of the same kind can technically be run
+  alongside each other, which would allow for several bots to be run in
+  parallel. This is not yet supported but there's nothing stopping it.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="SeenPlugin" class="public" href="../../kameloso/plugins/seen/SeenPlugin.html">SeenPlugin</a>
+								</code>
+							</td>
+							<td>This is your plugin to the outside world, the only thing visible in the
+  entire module. It only serves as a way of proxying calls to our top-level
+  private functions, as well as to house plugin-private variables that we want
+  to keep out of top-level scope for the sake of modularity. If the only state
+  is in the plugin, several plugins of the same kind can technically be run
+  alongside each other, which would allow for several bots to be run in
+  parallel. This is not yet supported but there's nothing stopping it.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="SeenPlugin" class="public" href="../../kameloso/plugins/seen/SeenPlugin.html">SeenPlugin</a>
+								</code>
+							</td>
+							<td>This is your plugin to the outside world, the only thing visible in the
+  entire module. It only serves as a way of proxying calls to our top-level
+  private functions, as well as to house plugin-private variables that we want
+  to keep out of top-level scope for the sake of modularity. If the only state
+  is in the plugin, several plugins of the same kind can technically be run
+  alongside each other, which would allow for several bots to be run in
+  parallel. This is not yet supported but there's nothing stopping it.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="SeenPlugin" class="public" href="../../kameloso/plugins/seen/SeenPlugin.html">SeenPlugin</a>
+								</code>
+							</td>
+							<td>This is your plugin to the outside world, the only thing visible in the
+  entire module. It only serves as a way of proxying calls to our top-level
+  private functions, as well as to house plugin-private variables that we want
+  to keep out of top-level scope for the sake of modularity. If the only state
+  is in the plugin, several plugins of the same kind can technically be run
+  alongside each other, which would allow for several bots to be run in
+  parallel. This is not yet supported but there's nothing stopping it.
+</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Module kameloso.thread</title>
+		<link rel="stylesheet" href="../css/style.min.css"/>
+		<script type="text/javascript" src="../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view collapsed">
+						<div class="package ">
+							<a href="../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Module kameloso.thread</h1><p>Structures and functions related to concurrency message passing, threads and
+  <code class="lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">thread<wbr/></span><span class="pun">.</span><span class="typ">Fiber</span></code>s.
+</p><section></section>
+
+				<section><section><h2>Example</h2>
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">concurrency</span><span class="pun">;
+
+</span><span class="pln">mainThread<wbr/></span><span class="pun">.</span><span class="pln">send</span><span class="pun">(<a href="../kameloso/thread/ThreadMessage.Sendline.html"></span><span class="typ">ThreadMessage<wbr/></span><span class="pun">.</span><span class="typ">Sendline</span></a><span class="pun">(), </span><span class="str">"Message to send to server"</span><span class="pun">);
+</span><span class="pln">mainThread<wbr/></span><span class="pun">.</span><span class="pln">send</span><span class="pun">(<a href="../kameloso/thread/ThreadMessage.Pong.html"></span><span class="typ">ThreadMessage<wbr/></span><span class="pun">.</span><span class="typ">Pong</span></a><span class="pun">(), </span><span class="str">"irc.freenode.net"</span><span class="pun">);
+</span><span class="pln">mainThread<wbr/></span><span class="pun">.</span><span class="pln">send</span><span class="pun">(</span><span class="typ">ThreadMessage<wbr/></span><span class="pun">.</span><span class="typ">TerminalOutput<wbr/></span><span class="pun">.</span><span class="pln">writeln</span><span class="pun">, </span><span class="str">"writeln this for me please"</span><span class="pun">);
+</span><span class="pln">mainThread<wbr/></span><span class="pun">.</span><span class="pln">send</span><span class="pun">(<a href="../kameloso/thread/ThreadMessage.BusMessage.html"></span><span class="typ">ThreadMessage<wbr/></span><span class="pun">.</span><span class="typ">BusMessage</span></a><span class="pun">(), </span><span class="str">"header"</span><span class="pun">, <a href="../kameloso/thread/busMessage.html"></span><span class="pln">busMessage</span></a><span class="pun">(</span><span class="str">"payload"</span><span class="pun">));
+
+</span><span class="kwd">auto </span><span class="pln">fiber </span><span class="pun">= </span><span class="kwd">new <a href="../kameloso/thread/CarryingFiber.html"></span><span class="typ">CarryingFiber</span></a><span class="pun">!</span><span class="typ">string</span><span class="pun">(&amp;</span><span class="pln">someDelegate</span><span class="pun">, </span><span class="lit">32768</span><span class="pun">);
+</span><span class="pln">fiber<wbr/></span><span class="pun">.</span><span class="pln">payload </span><span class="pun">= </span><span class="str">"This string is carried by the Fiber and can be accessed from within it"</span><span class="pun">;
+</span><span class="pln">fiber<wbr/></span><span class="pun">.</span><span class="pln">call</span><span class="pun">();
+</span><span class="pln">fiber<wbr/></span><span class="pun">.</span><span class="pln">payload </span><span class="pun">= </span><span class="str">"You can change it inbetween calls to pass information to it"</span><span class="pun">;
+</span><span class="pln">fiber<wbr/></span><span class="pun">.</span><span class="pln">call</span><span class="pun">();
+
+</span><span class="com">// As such we can make Fibers act like they're taking new arguments each call
+</span><span class="kwd">auto </span><span class="pln">fiber2 </span><span class="pun">= </span><span class="kwd">new <a href="../kameloso/thread/CarryingFiber.html"></span><span class="typ">CarryingFiber</span></a><span class="pun">!</span><span class="typ">IRCEvent</span><span class="pun">(&amp;</span><span class="pln">otherDelegate</span><span class="pun">, </span><span class="lit">32768</span><span class="pun">);
+</span><span class="pln">fiber2<wbr/></span><span class="pun">.</span><span class="pln">payload </span><span class="pun">= </span><span class="pln">newIncomingIRCEvent</span><span class="pun">;
+</span><span class="pln">fiber2<wbr/></span><span class="pun">.</span><span class="pln">call</span><span class="pun">();
+</span><span class="com">// [...]
+</span><span class="pln">fiber2<wbr/></span><span class="pun">.</span><span class="pln">payload </span><span class="pun">= </span><span class="pln">evenNewerIncomingIRCEvent</span><span class="pun">;
+</span><span class="pln">fiber2<wbr/></span><span class="pun">.</span><span class="pln">call</span><span class="pun">();</span></code></pre>
+</section>
+</section>
+				<section>
+					<h2>Functions</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="busMessage" class="public" href="../kameloso/thread/busMessage.html">busMessage</a><span class="tableEntryAnnotation">(payload)</span>
+								</code>
+							</td>
+							<td>Constructor function to create a <code class="lang-d"><span class="kwd">shared</span></code> <code class="lang-d"><a href="../kameloso/thread/BusMessage.html"><span class="typ">BusMessage</span></a></code> with an unqualified template type.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="interruptibleSleep" class="public" href="../kameloso/thread/interruptibleSleep.html">interruptibleSleep</a><span class="tableEntryAnnotation">(dur, abort)</span>
+								</code>
+							</td>
+							<td>Sleep in small periods, checking the passed <code class="lang-d"><a href="../kameloso/thread/interruptibleSleep.html#abort"><span class="pln">abort</span></a></code> bool in between to see
+  if we should break and return.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="setThreadName" class="public" href="../kameloso/thread/setThreadName.html">setThreadName</a><span class="tableEntryAnnotation">(name)</span>
+								</code>
+							</td>
+							<td>Sets the thread name of the current thread, so they will show up named
+  in process managers (like <code class="lang-d"><span class="pln">top</span></code>).
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Interfaces</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="Sendable" class="public" href="../kameloso/thread/Sendable.html">Sendable</a>
+								</code>
+							</td>
+							<td>Interface for a message sendable through the message bus.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Classes</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="BusMessage" class="public" href="../kameloso/thread/BusMessage.html">BusMessage</a>
+								</code>
+							</td>
+							<td>A payload of type <code class="lang-d"><span class="pln">T</span></code> wrapped in a class implementing the <code class="lang-d"><a href="../kameloso/thread/Sendable.html"><span class="typ">Sendable</span></a></code> interface.
+  Used to box values for sending via the message bus.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="CarryingFiber" class="public" href="../kameloso/thread/CarryingFiber.html">CarryingFiber</a>
+								</code>
+							</td>
+							<td>A <code class="lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">thread<wbr/></span><span class="pun">.</span><span class="typ">Fiber</span></code> carrying a payload of type <code class="lang-d"><span class="pln">T</span></code>.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Structs</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="ThreadMessage" class="public" href="../kameloso/thread/ThreadMessage.html">ThreadMessage</a>
+								</code>
+							</td>
+							<td>Aggregate of thread message types.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Aliases</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a id="ScheduledFiber" class="public" href="../kameloso/thread/ScheduledFiber.html">
+									<code>ScheduledFiber</code>
+								</a>
+							</td>
+							<td>
+								<code class="prettyprint lang-d"><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">typecons<wbr/></span><span class="pun">.</span><span class="typ">Tuple</span>!(core.thread.fiber.Fiber,"fiber",long,"timestamp")</code>
+							</td>
+							<td>A tuple of a <code class="lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">thread<wbr/></span><span class="pun">.</span><span class="typ">Fiber</span></code> and a <code class="lang-d"><span class="typ">long</span></code> UNIX timestamp.
+</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

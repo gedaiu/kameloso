@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Module kameloso.plugins.twitchbot</title>
+		<link rel="stylesheet" href="../../css/style.min.css"/>
+		<script type="text/javascript" src="../../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">
+							<a href="../../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Module kameloso.plugins.twitchbot</h1><p>This is an example Twitch streamer bot. It supports querying uptime or how
+  long a streamer has been live, banned phrases, timered announcements and
+  voting.
+</p><section><p>It can also emit some terminal bells on certain events, to draw attention.
+</p>
+
+<p>  One immediately obvious venue of expansion is expression bans, such as if a
+  message has too many capital letters, etc. There is no protection from spam yet.
+</p>
+
+<p>  See the GitHub wiki for more information about available commands:<br>
+  - https://github.com/zorael/kameloso/wiki/Current-plugins#twitchbot
+</p>
+</section>
+
+				<section></section>
+				<section>
+					<h2>Functions</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="createTimerFiber" class="public" href="../../kameloso/plugins/twitchbot/createTimerFiber.html">createTimerFiber</a><span class="tableEntryAnnotation">(plugin, timerDef, channelName)</span>
+								</code>
+							</td>
+							<td>Given a <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TimerDefinition.html"><span class="typ">TimerDefinition</span></a></code> and a string channel name, creates a
+  <code class="lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">thread<wbr/></span><span class="pun">.</span><span class="typ">Fiber</span></code> that implements the timer.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="createTimerFiber" class="public" href="../../kameloso/plugins/twitchbot/createTimerFiber.html">createTimerFiber</a><span class="tableEntryAnnotation">(plugin, timerDef, channelName)</span>
+								</code>
+							</td>
+							<td>Given a <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TimerDefinition.html"><span class="typ">TimerDefinition</span></a></code> and a string channel name, creates a
+  <code class="lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">thread<wbr/></span><span class="pun">.</span><span class="typ">Fiber</span></code> that implements the timer.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="handlePhraseCommand" class="public" href="../../kameloso/plugins/twitchbot/handlePhraseCommand.html">handlePhraseCommand</a><span class="tableEntryAnnotation">(plugin, event, targetChannel)</span>
+								</code>
+							</td>
+							<td>Bans, unbans, lists or clears banned phrases for the specified target channel.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="handlePhraseCommand" class="public" href="../../kameloso/plugins/twitchbot/handlePhraseCommand.html">handlePhraseCommand</a><span class="tableEntryAnnotation">(plugin, event, targetChannel)</span>
+								</code>
+							</td>
+							<td>Bans, unbans, lists or clears banned phrases for the specified target channel.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="handleSelfjoin" class="public" href="../../kameloso/plugins/twitchbot/handleSelfjoin.html">handleSelfjoin</a><span class="tableEntryAnnotation">(plugin, channelName)</span>
+								</code>
+							</td>
+							<td>Registers a new <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TwitchBotPlugin.Channel.html"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.</span><span class="typ">Channel</span></a></code> as we join a channel, so there's
+  always a state struct available.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="handleSelfjoin" class="public" href="../../kameloso/plugins/twitchbot/handleSelfjoin.html">handleSelfjoin</a><span class="tableEntryAnnotation">(plugin, channelName)</span>
+								</code>
+							</td>
+							<td>Registers a new <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TwitchBotPlugin.Channel.html"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.</span><span class="typ">Channel</span></a></code> as we join a channel, so there's
+  always a state struct available.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="handleTimerCommand" class="public" href="../../kameloso/plugins/twitchbot/handleTimerCommand.html">handleTimerCommand</a><span class="tableEntryAnnotation">(plugin, event, targetChannel)</span>
+								</code>
+							</td>
+							<td>Adds, deletes, lists or clears timers for the specified target channel.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="handleTimerCommand" class="public" href="../../kameloso/plugins/twitchbot/handleTimerCommand.html">handleTimerCommand</a><span class="tableEntryAnnotation">(plugin, event, targetChannel)</span>
+								</code>
+							</td>
+							<td>Adds, deletes, lists or clears timers for the specified target channel.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="initResources" class="public" href="../../kameloso/plugins/twitchbot/initResources.html">initResources</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Reads and writes the file of banned phrases and timers to disk, ensuring
+  that they're there and properly formatted.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="initResources" class="public" href="../../kameloso/plugins/twitchbot/initResources.html">initResources</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Reads and writes the file of banned phrases and timers to disk, ensuring
+  that they're there and properly formatted.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onAnyMessage" class="public" href="../../kameloso/plugins/twitchbot/onAnyMessage.html">onAnyMessage</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Performs various actions on incoming messages.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onAnyMessage" class="public" href="../../kameloso/plugins/twitchbot/onAnyMessage.html">onAnyMessage</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Performs various actions on incoming messages.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onAutomaticStop" class="public" href="../../kameloso/plugins/twitchbot/onAutomaticStop.html">onAutomaticStop</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Automatically signals a stream stop when a host starts.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onAutomaticStop" class="public" href="../../kameloso/plugins/twitchbot/onAutomaticStop.html">onAutomaticStop</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Automatically signals a stream stop when a host starts.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onBusMessage" class="public" href="../../kameloso/plugins/twitchbot/onBusMessage.html">onBusMessage</a><span class="tableEntryAnnotation">(plugin, header, content)</span>
+								</code>
+							</td>
+							<td>Catches bus messages with a "<code class="lang-d"><span class="pln">home </span><span class="pun">(</span><span class="pln">add</span><span class="pun">|</span><span class="pln">del</span><span class="pun">)</span></code>" header requesting to add or
+  remove home channels.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onBusMessage" class="public" href="../../kameloso/plugins/twitchbot/onBusMessage.html">onBusMessage</a><span class="tableEntryAnnotation">(plugin, header, content)</span>
+								</code>
+							</td>
+							<td>Catches bus messages with a "<code class="lang-d"><span class="pln">home </span><span class="pun">(</span><span class="pln">add</span><span class="pun">|</span><span class="pln">del</span><span class="pun">)</span></code>" header requesting to add or
+  remove home channels.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandAbortVote" class="public" href="../../kameloso/plugins/twitchbot/onCommandAbortVote.html">onCommandAbortVote</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Aborts an ongoing vote.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandAbortVote" class="public" href="../../kameloso/plugins/twitchbot/onCommandAbortVote.html">onCommandAbortVote</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Aborts an ongoing vote.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandEnableDisable" class="public" href="../../kameloso/plugins/twitchbot/onCommandEnableDisable.html">onCommandEnableDisable</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles whether or not the bot should operate in this channel.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandEnableDisable" class="public" href="../../kameloso/plugins/twitchbot/onCommandEnableDisable.html">onCommandEnableDisable</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Toggles whether or not the bot should operate in this channel.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandPermit" class="public" href="../../kameloso/plugins/twitchbot/onCommandPermit.html">onCommandPermit</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Permits a user to post links for a hardcoded 60 seconds.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandPermit" class="public" href="../../kameloso/plugins/twitchbot/onCommandPermit.html">onCommandPermit</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Permits a user to post links for a hardcoded 60 seconds.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandPhrase" class="public" href="../../kameloso/plugins/twitchbot/onCommandPhrase.html">onCommandPhrase</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Bans, unbans, lists or clears banned phrases for the current channel.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandPhrase" class="public" href="../../kameloso/plugins/twitchbot/onCommandPhrase.html">onCommandPhrase</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Bans, unbans, lists or clears banned phrases for the current channel.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandStart" class="public" href="../../kameloso/plugins/twitchbot/onCommandStart.html">onCommandStart</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Marks the start of a broadcast, for later uptime queries.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandStart" class="public" href="../../kameloso/plugins/twitchbot/onCommandStart.html">onCommandStart</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Marks the start of a broadcast, for later uptime queries.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandStartVote" class="public" href="../../kameloso/plugins/twitchbot/onCommandStartVote.html">onCommandStartVote</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Instigates a vote.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandStartVote" class="public" href="../../kameloso/plugins/twitchbot/onCommandStartVote.html">onCommandStartVote</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Instigates a vote.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandStop" class="public" href="../../kameloso/plugins/twitchbot/onCommandStop.html">onCommandStop</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Marks the stop of a broadcast.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandStop" class="public" href="../../kameloso/plugins/twitchbot/onCommandStop.html">onCommandStop</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Marks the stop of a broadcast.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandTimer" class="public" href="../../kameloso/plugins/twitchbot/onCommandTimer.html">onCommandTimer</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Adds, deletes, lists or clears timers for the specified target channel.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandTimer" class="public" href="../../kameloso/plugins/twitchbot/onCommandTimer.html">onCommandTimer</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Adds, deletes, lists or clears timers for the specified target channel.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandUptime" class="public" href="../../kameloso/plugins/twitchbot/onCommandUptime.html">onCommandUptime</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Reports how long the streamer has been streaming.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onCommandUptime" class="public" href="../../kameloso/plugins/twitchbot/onCommandUptime.html">onCommandUptime</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Reports how long the streamer has been streaming.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onEndOfMotd" class="public" href="../../kameloso/plugins/twitchbot/onEndOfMotd.html">onEndOfMotd</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Populate the banned phrases array after we have successfully
+  logged onto the server.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onEndOfMotd" class="public" href="../../kameloso/plugins/twitchbot/onEndOfMotd.html">onEndOfMotd</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Populate the banned phrases array after we have successfully
+  logged onto the server.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onImportant" class="public" href="../../kameloso/plugins/twitchbot/onImportant.html">onImportant</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Bells on any important event, like subscriptions, cheers and raids, if the
+  <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TwitchBotSettings.bellOnImportant.html"><span class="typ">TwitchBotSettings<wbr/></span><span class="pun">.</span><span class="pln">bellOnImportant</span></a></code> setting is set.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onImportant" class="public" href="../../kameloso/plugins/twitchbot/onImportant.html">onImportant</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Bells on any important event, like subscriptions, cheers and raids, if the
+  <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TwitchBotSettings.bellOnImportant.html"><span class="typ">TwitchBotSettings<wbr/></span><span class="pun">.</span><span class="pln">bellOnImportant</span></a></code> setting is set.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onLink" class="public" href="../../kameloso/plugins/twitchbot/onLink.html">onLink</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Parses a message to see if the message contains one or more URLs.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onLink" class="public" href="../../kameloso/plugins/twitchbot/onLink.html">onLink</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Parses a message to see if the message contains one or more URLs.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onSelfjoin" class="public" href="../../kameloso/plugins/twitchbot/onSelfjoin.html">onSelfjoin</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Registers a new <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TwitchBotPlugin.Channel.html"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.</span><span class="typ">Channel</span></a></code> as we join a channel, so there's
+  always a state struct available.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onSelfjoin" class="public" href="../../kameloso/plugins/twitchbot/onSelfjoin.html">onSelfjoin</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Registers a new <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TwitchBotPlugin.Channel.html"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.</span><span class="typ">Channel</span></a></code> as we join a channel, so there's
+  always a state struct available.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onSelfpart" class="public" href="../../kameloso/plugins/twitchbot/onSelfpart.html">onSelfpart</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Removes a channel's corresponding <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TwitchBotPlugin.Channel.html"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.</span><span class="typ">Channel</span></a></code> when we leave it.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="onSelfpart" class="public" href="../../kameloso/plugins/twitchbot/onSelfpart.html">onSelfpart</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Removes a channel's corresponding <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TwitchBotPlugin.Channel.html"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.</span><span class="typ">Channel</span></a></code> when we leave it.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="periodically" class="public" href="../../kameloso/plugins/twitchbot/periodically.html">periodically</a><span class="tableEntryAnnotation">(plugin, now)</span>
+								</code>
+							</td>
+							<td>Periodically calls timer <code class="lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">thread<wbr/></span><span class="pun">.</span><span class="typ">Fiber</span></code>s with a periodicity of
+  <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TwitchBotPlugin.timerPeriodicity.html"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.</span><span class="pln">timerPeriodicity</span></a></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="periodically" class="public" href="../../kameloso/plugins/twitchbot/periodically.html">periodically</a><span class="tableEntryAnnotation">(plugin, now)</span>
+								</code>
+							</td>
+							<td>Periodically calls timer <code class="lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">thread<wbr/></span><span class="pun">.</span><span class="typ">Fiber</span></code>s with a periodicity of
+  <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TwitchBotPlugin.timerPeriodicity.html"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.</span><span class="pln">timerPeriodicity</span></a></code>.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="populateTimers" class="public" href="../../kameloso/plugins/twitchbot/populateTimers.html">populateTimers</a><span class="tableEntryAnnotation">(plugin, filename)</span>
+								</code>
+							</td>
+							<td>Populates the <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TwitchBotPlugin.timerDefsByChannel.html"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.</span><span class="pln">timerDefsByChannel</span></a></code> associative array with
+  the timer definitions in the passed JSON file.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="populateTimers" class="public" href="../../kameloso/plugins/twitchbot/populateTimers.html">populateTimers</a><span class="tableEntryAnnotation">(plugin, filename)</span>
+								</code>
+							</td>
+							<td>Populates the <code class="lang-d"><a href="../../kameloso/plugins/twitchbot/TwitchBotPlugin.timerDefsByChannel.html"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.</span><span class="pln">timerDefsByChannel</span></a></code> associative array with
+  the timer definitions in the passed JSON file.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="reportStopTime" class="public" href="../../kameloso/plugins/twitchbot/reportStopTime.html">reportStopTime</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Reports how long the recently ongoing, now ended broadcast lasted.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="reportStopTime" class="public" href="../../kameloso/plugins/twitchbot/reportStopTime.html">reportStopTime</a><span class="tableEntryAnnotation">(plugin, event)</span>
+								</code>
+							</td>
+							<td>Reports how long the recently ongoing, now ended broadcast lasted.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="saveResourceToDisk" class="public" href="../../kameloso/plugins/twitchbot/saveResourceToDisk.html">saveResourceToDisk</a><span class="tableEntryAnnotation">(resource, filename)</span>
+								</code>
+							</td>
+							<td>Saves the passed resource to disk, but in JSON format.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="saveResourceToDisk" class="public" href="../../kameloso/plugins/twitchbot/saveResourceToDisk.html">saveResourceToDisk</a><span class="tableEntryAnnotation">(resource, filename)</span>
+								</code>
+							</td>
+							<td>Saves the passed resource to disk, but in JSON format.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="start" class="public" href="../../kameloso/plugins/twitchbot/start.html">start</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Starts the plugin after successful connect, rescheduling the next
+  <code class="lang-d"><wbr/><span class="pun">.</span><span class="pln">periodical</span></code> to trigger after hardcoded 60 seconds.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="start" class="public" href="../../kameloso/plugins/twitchbot/start.html">start</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Starts the plugin after successful connect, rescheduling the next
+  <code class="lang-d"><wbr/><span class="pun">.</span><span class="pln">periodical</span></code> to trigger after hardcoded 60 seconds.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="timerDefsToJSON" class="public" href="../../kameloso/plugins/twitchbot/timerDefsToJSON.html">timerDefsToJSON</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Expresses the <code class="lang-d"><span class="typ">FiberDefinition</span></code> associative array (<code class="lang-d"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.</span><span class="pln">fiberDefsByChannel</span></code>)
+  in JSON form, for easier saving to and loading from disk.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="timerDefsToJSON" class="public" href="../../kameloso/plugins/twitchbot/timerDefsToJSON.html">timerDefsToJSON</a><span class="tableEntryAnnotation">(plugin)</span>
+								</code>
+							</td>
+							<td>Expresses the <code class="lang-d"><span class="typ">FiberDefinition</span></code> associative array (<code class="lang-d"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.</span><span class="pln">fiberDefsByChannel</span></code>)
+  in JSON form, for easier saving to and loading from disk.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Classes</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TwitchBotPlugin" class="public" href="../../kameloso/plugins/twitchbot/TwitchBotPlugin.html">TwitchBotPlugin</a>
+								</code>
+							</td>
+							<td>The Twitch Bot plugin is an example Twitch streamer bot. It contains some
+  basic tools for streamers, and the audience thereof.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TwitchBotPlugin" class="public" href="../../kameloso/plugins/twitchbot/TwitchBotPlugin.html">TwitchBotPlugin</a>
+								</code>
+							</td>
+							<td>The Twitch Bot plugin is an example Twitch streamer bot. It contains some
+  basic tools for streamers, and the audience thereof.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Structs</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TimerDefinition" class="public" href="../../kameloso/plugins/twitchbot/TimerDefinition.html">TimerDefinition</a>
+								</code>
+							</td>
+							<td>Definitions of a Twitch timer.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TimerDefinition" class="public" href="../../kameloso/plugins/twitchbot/TimerDefinition.html">TimerDefinition</a>
+								</code>
+							</td>
+							<td>Definitions of a Twitch timer.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TwitchBotSettings" class="public" href="../../kameloso/plugins/twitchbot/TwitchBotSettings.html">TwitchBotSettings</a>
+								</code>
+							</td>
+							<td>All Twitch bot plugin runtime settings.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="TwitchBotSettings" class="public" href="../../kameloso/plugins/twitchbot/TwitchBotSettings.html">TwitchBotSettings</a>
+								</code>
+							</td>
+							<td>All Twitch bot plugin runtime settings.
+</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>TwitchBotPlugin - multiple declarations</title>
+		<link rel="stylesheet" href="../../../css/style.min.css"/>
+		<script type="text/javascript" src="../../../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">
+							<a href="../../../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../../../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>TwitchBotPlugin - multiple declarations</h1>
+				<nav class="page-nav">
+					<ul>
+						<li>
+							<a href="#0">
+								Class <code>TwitchBotPlugin</code>
+							</a>
+						</li>
+						<li>
+							<a href="#1">
+								Class <code>TwitchBotPlugin</code>
+							</a>
+						</li>
+					</ul>
+				</nav><h2 id="0">Class TwitchBotPlugin</h2><p>The Twitch Bot plugin is an example Twitch streamer bot. It contains some
+  basic tools for streamers, and the audience thereof.
+</p>
+				<div class="prototype">
+					<code class="lang-d">
+						<div class="single-prototype">
+				<span class="kwd">class</span> <span class="typ">TwitchBotPlugin</span>
+				<span class="pun">;</span>
+						</div>
+					</code>
+				</div>
+				
+				<section><h3>Fields</h3>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.activeChannels.html" class="public"><code>activeChannels</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.Channel.html"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Channel</span></a><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span></code></td><td>Array of active bot channels' state.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.bannedPhrasesByChannel.html" class="public"><code>bannedPhrasesByChannel</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span><span class="pun">[]</span><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span></code></td><td>Associative array of banned phrases; phrases array keyed by channel.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.bannedPhrasesFile.html" class="public"><code>bannedPhrasesFile</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Filename of file with banned phrases.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.nextPrune.html" class="public"><code>nextPrune</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">long</span></code></td><td>When to next clear expired permits and bans.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.timerDefsByChannel.html" class="public"><code>timerDefsByChannel</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><a href="../../../kameloso/plugins/twitchbot/TimerDefinition.html"><span class="typ">TimerDefinition</span></a><span class="pun">[]</span><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span></code></td><td>Timer definition arrays, keyed by channel string.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.timersFile.html" class="public"><code>timersFile</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Filename of file with timer definitions.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.twitchBotSettings.html" class="public"><code>twitchBotSettings</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><a href="../../../kameloso/plugins/twitchbot/TwitchBotSettings.html"><span class="typ">TwitchBotSettings</span></a></code></td><td>All Twitch Bot plugin settings.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h3>Methods</h3>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.onEvent.html" class="public">
+									<code>onEvent</code>
+								</a>
+								<span class="tableEntryAnnotation">(event)</span>
+							</td>
+							<td>Override <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginImpl.onEvent.html" title="kameloso.plugins.ircplugin.IRCPluginImpl.onEvent"><span class="typ">IRCPluginImpl<wbr/></span><span class="pun">.</span><span class="pln">onEvent</span></a></code> and inject a server check, so this
+  plugin does nothing on non-Twitch servers. Also filters <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="pln">CHAN</span></code>
+  events to only trigger on active channels (that have its <code class="lang-d"><a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.Channel.enabled.html"><span class="typ">Channel<wbr/></span><span class="pun">.</span><span class="pln">enabled</span></a></code>
+  set to true).
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h3>Inner structs</h3>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.Channel.html" class="public">
+									<code>Channel</code>
+								</a>
+							</td>
+							<td>Contained state of a channel, so that there can be several alongside each other.
+</td>
+						</tr>
+					</table>
+				</section>
+				<h2 id="1">Class TwitchBotPlugin</h2><p>The Twitch Bot plugin is an example Twitch streamer bot. It contains some
+  basic tools for streamers, and the audience thereof.
+</p>
+				<div class="prototype">
+					<code class="lang-d">
+						<div class="single-prototype">
+				<span class="kwd">class</span> <span class="typ">TwitchBotPlugin</span>
+				<span class="pun">;</span>
+						</div>
+					</code>
+				</div>
+				
+				<section><h3>Fields</h3>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.activeChannels.html" class="public"><code>activeChannels</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.Channel.html"><span class="typ">TwitchBotPlugin<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Channel</span></a><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span></code></td><td>Array of active bot channels' state.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.bannedPhrasesByChannel.html" class="public"><code>bannedPhrasesByChannel</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span><span class="pun">[]</span><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span></code></td><td>Associative array of banned phrases; phrases array keyed by channel.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.bannedPhrasesFile.html" class="public"><code>bannedPhrasesFile</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Filename of file with banned phrases.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.nextPrune.html" class="public"><code>nextPrune</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">long</span></code></td><td>When to next clear expired permits and bans.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.timerDefsByChannel.html" class="public"><code>timerDefsByChannel</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><a href="../../../kameloso/plugins/twitchbot/TimerDefinition.html"><span class="typ">TimerDefinition</span></a><span class="pun">[]</span><span class="pun">[</span><span class="typ">string</span><span class="pun">]</span></code></td><td>Timer definition arrays, keyed by channel string.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.timersFile.html" class="public"><code>timersFile</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Filename of file with timer definitions.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.twitchBotSettings.html" class="public"><code>twitchBotSettings</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><a href="../../../kameloso/plugins/twitchbot/TwitchBotSettings.html"><span class="typ">TwitchBotSettings</span></a></code></td><td>All Twitch Bot plugin settings.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h3>Methods</h3>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.onEvent.html" class="public">
+									<code>onEvent</code>
+								</a>
+								<span class="tableEntryAnnotation">(event)</span>
+							</td>
+							<td>Override <code class="lang-d"><a href="../../../kameloso/plugins/ircplugin/IRCPluginImpl.onEvent.html" title="kameloso.plugins.ircplugin.IRCPluginImpl.onEvent"><span class="typ">IRCPluginImpl<wbr/></span><span class="pun">.</span><span class="pln">onEvent</span></a></code> and inject a server check, so this
+  plugin does nothing on non-Twitch servers. Also filters <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="pln">CHAN</span></code>
+  events to only trigger on active channels (that have its <code class="lang-d"><a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.Channel.enabled.html"><span class="typ">Channel<wbr/></span><span class="pun">.</span><span class="pln">enabled</span></a></code>
+  set to true).
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h3>Inner structs</h3>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../../kameloso/plugins/twitchbot/TwitchBotPlugin.Channel.html" class="public">
+									<code>Channel</code>
+								</a>
+							</td>
+							<td>Contained state of a channel, so that there can be several alongside each other.
+</td>
+						</tr>
+					</table>
+				</section>
+				
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

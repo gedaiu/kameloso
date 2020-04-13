@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Function findURLs</title>
+		<link rel="stylesheet" href="../../css/style.min.css"/>
+		<script type="text/javascript" src="../../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view collapsed">
+						<div class="package ">
+							<a href="../../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Function findURLs</h1><p>Finds URLs in a string, returning an array of them. Does not filter out duplicates.
+</p>
+				<div class="prototype">
+					<code class="lang-d">
+						<div class="single-prototype">
+				<span class="typ">string</span><span class="pun">[]</span> <span class="pln">findURLs</span>
+				<span class="pun">(</span>
+				<br/>
+				&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">line</span>
+				<br/>
+				<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure @safe</span><span class="pun">;</span>
+						</div>
+					</code>
+				</div>
+				<section><p>Replacement for regex matching using much less memory when compiling
+  (around ~300mb).
+</p>
+
+<p>  To consider: does this need a <code class="lang-d"><span class="pln">dstring</span></code>?
+</p>
+</section>
+
+				<section><h2>Example</h2>
+<pre class="code"><code class="lang-d"><span class="com">// Replaces the following:
+// enum stephenhay = `\bhttps?://[^\s/$.?#].[^\s]*`;
+// static urlRegex = ctRegex!stephenhay;
+
+</span><span class="typ">string</span><span class="pun">[] </span><span class="pln">urls </span><span class="pun">= </span><span class="pln">findURL</span><span class="pun">(</span><span class="str">"blah https://google.com http://facebook.com httpx://wefpokwe"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">2</span><span class="pun">);</span></code></pre>
+</section>
+<section><h2>Parameters</h2>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="line">line</td><td> String line to examine and find URLs in.</td></tr>
+</table>
+</section>
+<section><h2>Returns</h2>
+<p>A <code class="lang-d"><span class="typ">string</span><span class="pun">[]</span></code> array of found URLs. These include fragment identifiers.
+</p>
+</section>
+<section><h2>Example</h2>
+
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">conv </span><span class="pun">: </span><span class="pln">text</span><span class="pun">;
+
+{
+    </span><span class="kwd">const </span><span class="pln">urls </span><span class="pun">= </span><span class="pln">findURLs</span><span class="pun">(</span><span class="str">"http://google.com"</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">), </span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">urls</span><span class="pun">[</span><span class="lit">0</span><span class="pun">] == </span><span class="str">"http://google.com"</span><span class="pun">), </span><span class="pln">urls</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]);
+}
+{
+    </span><span class="kwd">const </span><span class="pln">urls </span><span class="pun">= </span><span class="pln">findURLs</span><span class="pun">(</span><span class="str">"blah https://a.com http://b.com shttps://c https://d.asdf.asdf.asdf        "</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">3</span><span class="pun">), </span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">urls </span><span class="pun">== [ </span><span class="str">"https://a.com"</span><span class="pun">, </span><span class="str">"http://b.com"</span><span class="pun">, </span><span class="str">"https://d.asdf.asdf.asdf" </span><span class="pun">]), </span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+}
+{
+    </span><span class="kwd">const </span><span class="pln">urls </span><span class="pun">= </span><span class="pln">findURLs</span><span class="pun">(</span><span class="str">"http:// http://asdf https:// asdfhttpasdf http"</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">length</span><span class="pun">, </span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+}
+{
+    </span><span class="kwd">const </span><span class="pln">urls </span><span class="pun">= </span><span class="pln">findURLs</span><span class="pun">(</span><span class="str">"http://a.sehttp://a.shttp://a.http://http:"</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">length</span><span class="pun">, </span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+}
+{
+    </span><span class="kwd">const </span><span class="pln">urls </span><span class="pun">= </span><span class="pln">findURLs</span><span class="pun">(</span><span class="str">"blahblah https://motorbörsen.se blhblah"</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">length</span><span class="pun">, </span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+}
+{
+    </span><span class="com">// Let dlang-requests attempt complex URLs, don't validate more than necessary
+    </span><span class="kwd">const </span><span class="pln">urls </span><span class="pun">= </span><span class="pln">findURLs</span><span class="pun">(</span><span class="str">"blahblah https://高所恐怖症。co.jp blhblah"</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">length</span><span class="pun">, </span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+}
+{
+    </span><span class="kwd">const </span><span class="pln">urls </span><span class="pun">= </span><span class="pln">findURLs</span><span class="pun">(</span><span class="str">"nyaa is now at https://nyaa.si, https://nyaa.si? " </span><span class="pun">~
+        </span><span class="str">"https://nyaa.si. https://nyaa.si! and you should use it https://nyaa.si:"</span><span class="pun">);
+
+    </span><span class="kwd">foreach </span><span class="pun">(</span><span class="kwd">immutable </span><span class="pln">url</span><span class="pun">; </span><span class="pln">urls</span><span class="pun">)
+    {
+        </span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">url </span><span class="pun">== </span><span class="str">"https://nyaa.si"</span><span class="pun">), </span><span class="pln">url</span><span class="pun">);
+    }
+}
+{
+    </span><span class="kwd">const </span><span class="pln">urls </span><span class="pun">= </span><span class="pln">findURLs</span><span class="pun">(</span><span class="str">"https://google.se httpx://google.se https://google.se"</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">urls </span><span class="pun">== [ </span><span class="str">"https://google.se"</span><span class="pun">, </span><span class="str">"https://google.se" </span><span class="pun">]), </span><span class="pln">urls<wbr/></span><span class="pun">.</span><span class="pln">text</span><span class="pun">);
+}
+</span></code></pre>
+</section>
+
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

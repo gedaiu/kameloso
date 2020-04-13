@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Module kameloso.plugins.ircplugin</title>
+		<link rel="stylesheet" href="../../css/style.min.css"/>
+		<script type="text/javascript" src="../../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">
+							<a href="../../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Module kameloso.plugins.ircplugin</h1><p>Contains the definition of an <code class="lang-d"><a href="../../kameloso/plugins/ircplugin/IRCPlugin.html"><span class="typ">IRCPlugin</span></a></code>, as well as a mixin <code class="lang-d"><a href="../../kameloso/plugins/ircplugin/IRCPluginImpl.html"><span class="typ">IRCPluginImpl</span></a></code>
+  to fully implement one.
+</p><section><p>Event handlers can then be module-level functions, annotated with
+  <code class="lang-d"><span class="pln">dialect<wbr/></span><span class="pun">.</span><span class="pln">defs<wbr/></span><span class="pun">.</span><span class="typ">IRCEvent<wbr/></span><span class="pun">.</span><span class="typ">Type</span></code>s.
+</p>
+</section>
+
+				<section><section><h2>Example</h2>
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">plugins<wbr/></span><span class="pun">.</span><span class="pln">ircplugin</span><span class="pun">;
+</span><span class="kwd">import <a href="../../kameloso/plugins/common.html"></span><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">plugins<wbr/></span><span class="pun">.</span><span class="pln">common</span></a><span class="pun">;
+</span><span class="kwd">import <a href="../../kameloso/plugins/awareness.html"></span><span class="pln">kameloso<wbr/></span><span class="pun">.</span><span class="pln">plugins<wbr/></span><span class="pun">.</span><span class="pln">awareness</span></a><span class="pun">;
+
+@(</span><span class="typ">IRCEvent<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="pln">CHAN</span><span class="pun">)
+@(</span><span class="typ">ChannelPolicy<wbr/></span><span class="pun">.</span><span class="pln">home</span><span class="pun">)
+@(</span><span class="typ">PrefixPolicy<wbr/></span><span class="pun">.</span><span class="pln">prefixed</span><span class="pun">)
+@</span><span class="typ">BotCommand</span><span class="pun">(</span><span class="typ">PrivilegeLevel<wbr/></span><span class="pun">.</span><span class="pln">anyone</span><span class="pun">, </span><span class="str">"foo"</span><span class="pun">)
+</span><span class="typ">void </span><span class="pln">onFoo</span><span class="pun">(</span><span class="typ">FooPlugin </span><span class="pln">plugin</span><span class="pun">, </span><span class="kwd">const </span><span class="typ">IRCEvent </span><span class="pln">event</span><span class="pun">)
+{
+    </span><span class="com">// ...
+</span><span class="pun">}
+
+</span><span class="kwd">mixin </span><span class="typ">UserAwareness</span><span class="pun">;
+</span><span class="kwd">mixin </span><span class="typ">ChannelAwareness</span><span class="pun">;
+
+</span><span class="kwd">final class </span><span class="typ">FooPlugin </span><span class="pun">: <a href="../../kameloso/plugins/ircplugin/IRCPlugin.html"></span><span class="typ">IRCPlugin</span></a><span class="pln">
+</span><span class="pun">{
+    </span><span class="com">// ...
+
+    </span><span class="kwd">mixin <a href="../../kameloso/plugins/ircplugin/IRCPluginImpl.html"></span><span class="typ">IRCPluginImpl</span></a><span class="pun">;
+}</span></code></pre>
+</section>
+</section>
+				<section>
+					<h2>Functions</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="filterSender" class="public" href="../../kameloso/plugins/ircplugin/filterSender.html">filterSender</a><span class="tableEntryAnnotation">(state, event, level)</span>
+								</code>
+							</td>
+							<td>Decides if a sender meets a <code class="lang-d"><span class="typ">PrivilegeLevel</span></code> and is allowed to trigger an event
+  handler, or if a WHOIS query is needed to be able to tell.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="prefixPolicyMatches" class="public" href="../../kameloso/plugins/ircplugin/prefixPolicyMatches.html">prefixPolicyMatches</a><span class="tableEntryAnnotation">(mutEvent, policy, client)</span>
+								</code>
+							</td>
+							<td>Evaluates whether or not the message in an event satisfies the <code class="lang-d"><span class="typ">PrefixPolicy</span></code>
+  specified, as fetched from a <code class="lang-d"><span class="typ">BotCommand</span></code> or <code class="lang-d"><span class="typ">BotRegex</span></code> UDA.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Interfaces</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="IRCPlugin" class="public" href="../../kameloso/plugins/ircplugin/IRCPlugin.html">IRCPlugin</a>
+								</code>
+							</td>
+							<td>Interface that all <code class="lang-d"><span class="typ">IRCPlugin</span></code>s must adhere to.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Structs</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="IRCPluginState" class="public" href="../../kameloso/plugins/ircplugin/IRCPluginState.html">IRCPluginState</a>
+								</code>
+							</td>
+							<td>An aggregate of all variables that make up the common state of plugins.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>Templates</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<code>
+									<a id="IRCPluginImpl" class="public" href="../../kameloso/plugins/ircplugin/IRCPluginImpl.html">IRCPluginImpl</a>
+								</code>
+							</td>
+							<td>Mixin that fully implements an <code class="lang-d"><a href="../../kameloso/plugins/ircplugin/IRCPlugin.html"><span class="typ">IRCPlugin</span></a></code>.
+</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

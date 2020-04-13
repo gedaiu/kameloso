@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Class KamelosoLogger</title>
+		<link rel="stylesheet" href="../../css/style.min.css"/>
+		<script type="text/javascript" src="../../js/script.min.js"></script>
+	</head>
+	<body onload="setupDdox();">
+		<header></header>
+		<nav id="main-nav">
+			<div>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<form action="#" method="GET">
+						<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/>
+					</form>
+					<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script>
+				</div>
+				<ul class="tree-view">
+					<li class="tree-view ">
+						<div class="package ">kameloso
+						</div>
+				<ul class="tree-view">
+					<li class="tree-view collapsed">
+						<div class="package ">
+							<a href="../../kameloso/plugins.html">plugins</a>
+						</div>
+				<ul class="tree-view">
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/admin.html">admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/automode.html">automode</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/awareness.html">awareness</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chanqueries.html">chanqueries</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/chatbot.html">chatbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/connect.html">connect</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ctcp.html">ctcp</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/help.html">help</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/ircplugin.html">ircplugin</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/notes.html">notes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/oneliners.html">oneliners</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/persistence.html">persistence</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/pipeline.html">pipeline</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/printer.html">printer</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/quotes.html">quotes</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/sedreplace.html">sedreplace</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/seen.html">seen</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/twitchbot.html">twitchbot</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/plugins/webtitles.html">webtitles</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/common.html">common</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/config.html">config</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/constants.html">constants</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/getopt.html">getopt</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/irccolours.html">irccolours</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/kameloso.html">kameloso</a>
+						</div>
+					</li>
+					<li>
+						<div class="module selected">
+							<a href="../../kameloso/logger.html">logger</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/main.html">main</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/messaging.html">messaging</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/platform.html">platform</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/printing.html">printing</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/semver.html">semver</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/terminal.html">terminal</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/thread.html">thread</a>
+						</div>
+					</li>
+					<li>
+						<div class="module ">
+							<a href="../../kameloso/traits.html">traits</a>
+						</div>
+					</li>
+				</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="main-nav-footer">
+				Built with
+				<a href="https://github.com/MartinNowak/scod">scod</a>
+			</p>
+		</nav>
+		<div id="main-contents">
+			<div>
+				<h1>Class KamelosoLogger</h1><p>Modified <code class="lang-d"><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">experimental<wbr/></span><span class="pun">.</span><span class="pln">logger<wbr/></span><span class="pun">.</span><span class="typ">Logger</span></code> to print timestamped and coloured logging messages.
+</p>
+				<div class="prototype">
+					<code class="lang-d">
+						<div class="single-prototype">
+				<span class="kwd">class</span> <span class="typ">KamelosoLogger</span>
+				<br>&nbsp;&nbsp;: <span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">experimental<wbr/></span><span class="pun">.</span><span class="pln">logger<wbr/></span><span class="pun">.</span><span class="pln">core<wbr/></span><span class="pun">.</span><span class="typ">Logger</span>
+				<span class="pun">;</span>
+						</div>
+					</code>
+				</div>
+				<section><p>It is thread-local so instantiate more if you're threading. Even so there
+  may be race conditions.
+</p>
+</section>
+
+				<section><h2>Constructors</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.this.html" class="public">
+									<code>this</code>
+								</a>
+								<span class="tableEntryAnnotation">(lv, monochrome, brightTerminal, flush)</span>
+							</td>
+							<td>Create a new <code class="lang-d"><a href="../../kameloso/logger/KamelosoLogger.html"><span class="typ">KamelosoLogger</span></a></code> with the passed settings.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>Fields</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.brightTerminal.html" class="public"><code>brightTerminal</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Whether or not to use colours for a bright background.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.flush.html" class="public"><code>flush</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Whether or not we should flush stdout after finishing writing to it.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.monochrome.html" class="public"><code>monochrome</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Whether to use colours or not in logger output.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>Properties</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.errortint.html" class="public property"><code>errortint</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Provides easy way to get an error tint.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.errortint.html" class="public property"><code>errortint</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Provides easy way to get an error tint.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.fataltint.html" class="public property"><code>fataltint</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Provides easy way to get a fatal tint.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.fataltint.html" class="public property"><code>fataltint</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Provides easy way to get a fatal tint.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.infotint.html" class="public property"><code>infotint</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Provides easy way to get an info tint.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.infotint.html" class="public property"><code>infotint</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Provides easy way to get an info tint.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.logtint.html" class="public property"><code>logtint</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Provides easy way to get a log tint.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.logtint.html" class="public property"><code>logtint</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Provides easy way to get a log tint.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.warningtint.html" class="public property"><code>warningtint</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Provides easy way to get a warning tint.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.warningtint.html" class="public property"><code>warningtint</code></a><span class="tableEntryAnnotation">[get]</span>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td><td>Provides easy way to get a warning tint.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>Methods</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.tint.html" class="public">
+									<code>tint</code>
+								</a>
+								<span class="tableEntryAnnotation">(level, bright)</span>
+							</td>
+							<td>Returns the corresponding <code class="lang-d"><a href="../../kameloso/terminal/TerminalForeground.html" title="kameloso.terminal.TerminalForeground"><span class="typ">TerminalForeground</span></a></code> for the
+  supplied <code class="lang-d"><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">experimental<wbr/></span><span class="pun">.</span><span class="pln">logger<wbr/></span><span class="pun">.</span><span class="typ">LogLevel</span></code>,
+  taking into account whether the terminal is said to be bright or not.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.tint.html" class="public">
+									<code>tint</code>
+								</a>
+								<span class="tableEntryAnnotation">(level, bright)</span>
+							</td>
+							<td>Returns the corresponding <code class="lang-d"><a href="../../kameloso/terminal/TerminalForeground.html" title="kameloso.terminal.TerminalForeground"><span class="typ">TerminalForeground</span></a></code> for the
+  supplied <code class="lang-d"><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">experimental<wbr/></span><span class="pun">.</span><span class="pln">logger<wbr/></span><span class="pun">.</span><span class="typ">LogLevel</span></code>,
+  taking into account whether the terminal is said to be bright or not.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.writeLogMsg.html" class="public">
+									<code>writeLogMsg</code>
+								</a>
+								<span class="tableEntryAnnotation">(payload)</span>
+							</td>
+							<td>This override is needed or it won't compile.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.beginLogMsg.html" class="protected">
+									<code>beginLogMsg</code>
+								</a>
+								<span class="tableEntryAnnotation">(sink, file, line, funcName, prettyFuncName, moduleName, logLevel, threadId, timestamp, logger)</span>
+							</td>
+							<td>Outputs the header of a logger message.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.beginLogMsg.html" class="protected">
+									<code>beginLogMsg</code>
+								</a>
+								<span class="tableEntryAnnotation">(file, line, funcName, prettyFuncName, moduleName, logLevel, threadId, timestamp, logger)</span>
+							</td>
+							<td>Outputs the header of a logger message.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.finishLogMsg.html" class="protected">
+									<code>finishLogMsg</code>
+								</a>
+								<span class="tableEntryAnnotation">(sink)</span>
+							</td>
+							<td>Outputs the tail of a logger message.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.finishLogMsg.html" class="protected">
+									<code>finishLogMsg</code>
+								</a>
+								<span class="tableEntryAnnotation">()</span>
+							</td>
+							<td>Outputs the tail of a logger message.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.logMsgPart.html" class="protected">
+									<code>logMsgPart</code>
+								</a>
+								<span class="tableEntryAnnotation">(sink, msg)</span>
+							</td>
+							<td>Outputs the message part of a logger message; the content.
+</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../kameloso/logger/KamelosoLogger.logMsgPart.html" class="protected">
+									<code>logMsgPart</code>
+								</a>
+								<span class="tableEntryAnnotation">(msg)</span>
+							</td>
+							<td>Outputs the message part of a logger message; the content.
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>See Also</h2>
+<p>std.experimental.logger.Logger.
+</p>
+</section>
+<section><h2>Example</h2>
+
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">experimental<wbr/></span><span class="pun">.</span><span class="pln">logger </span><span class="pun">: </span><span class="typ">LogLevel</span><span class="pun">;
+
+</span><span class="typ">Logger </span><span class="pln">log_ </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">KamelosoLogger</span><span class="pun">(</span><span class="typ">LogLevel<wbr/></span><span class="pun">.</span><span class="pln">all</span><span class="pun">, </span><span class="kwd">true</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">);
+
+</span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"log: log"</span><span class="pun">);
+</span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">info</span><span class="pun">(</span><span class="str">"log: info"</span><span class="pun">);
+</span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">warning</span><span class="pun">(</span><span class="str">"log: warning"</span><span class="pun">);
+</span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">error</span><span class="pun">(</span><span class="str">"log: error"</span><span class="pun">);
+</span><span class="com">// log_.fatal("log: FATAL");  // crashes the program
+</span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">trace</span><span class="pun">(</span><span class="str">"log: trace"</span><span class="pun">);
+
+</span><span class="kwd">version</span><span class="pun">(</span><span class="typ">Colours</span><span class="pun">)
+{
+    </span><span class="pln">log_ </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">KamelosoLogger</span><span class="pun">(</span><span class="typ">LogLevel<wbr/></span><span class="pun">.</span><span class="pln">all</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">, </span><span class="kwd">true</span><span class="pun">);
+
+    </span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"log: log"</span><span class="pun">);
+    </span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">info</span><span class="pun">(</span><span class="str">"log: info"</span><span class="pun">);
+    </span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">warning</span><span class="pun">(</span><span class="str">"log: warning"</span><span class="pun">);
+    </span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">error</span><span class="pun">(</span><span class="str">"log: error"</span><span class="pun">);
+    </span><span class="com">// log_.fatal("log: FATAL");
+    </span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">trace</span><span class="pun">(</span><span class="str">"log: trace"</span><span class="pun">);
+
+    </span><span class="pln">log_ </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">KamelosoLogger</span><span class="pun">(</span><span class="typ">LogLevel<wbr/></span><span class="pun">.</span><span class="pln">all</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">);
+
+    </span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"log: log"</span><span class="pun">);
+    </span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">info</span><span class="pun">(</span><span class="str">"log: info"</span><span class="pun">);
+    </span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">warning</span><span class="pun">(</span><span class="str">"log: warning"</span><span class="pun">);
+    </span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">error</span><span class="pun">(</span><span class="str">"log: error"</span><span class="pun">);
+    </span><span class="com">// log_.fatal("log: FATAL");
+    </span><span class="pln">log_<wbr/></span><span class="pun">.</span><span class="pln">trace</span><span class="pun">(</span><span class="str">"log: trace"</span><span class="pun">);
+}
+</span></code></pre>
+</section>
+
+			</div>
+			<footer>
+				<div id="license-info">
+					
+					
+					
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
